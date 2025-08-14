@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+.btn1 {
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 24px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #6B26D8, #DD7F41);
+  transition: background 0.3s ease;
+}
+.btn2 {
+  width: 205px;  
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 24px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #DD7F41, #6B26D8);
+  transition: background 0.3s ease;
+}
+/* Slightly rounded */
+.btn{
+  border-radius: 50px;
+    width: 205px;
+    height: 60px;
+}
+
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+.whitebtn1 {
+  border-radius: 50px;
+}
+.whitebtn1 {
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 24px;
+  cursor: pointer;
+  background: white;
+  transition: background 0.3s ease;
+}
+
+.gradient-text {
+width: fit-content;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 600; /* semibold */
+  letter-spacing: 0px;
+  background: linear-gradient(90deg, #6B26D8, #DD7F41);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For Firefox */
+}
