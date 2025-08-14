@@ -3,11 +3,12 @@
   flex-direction: column;
   background: #ffffff;
   border-radius: 20px;
-  padding: 16px;
+  padding: 1.5rem 1rem;
   box-shadow: 0 4px 12px rgb(230, 22, 22);
   font-family: 'Geist', sans-serif;
   color: #bb3636;
-  max-width: 304px;
+  max-width: max-content;
+  box-sizing: border-box;
 }
 
 .podcast-text-container {
@@ -17,7 +18,7 @@
 }
 
 .podcast-description {
-  font-size: 12px;
+  font-size: .8rem;
   height: 21px;
   width: 304px;
   font-weight: 400;
@@ -27,7 +28,7 @@
 }
 
 .podcast-list {
-  font-size: 14px;
+  font-size: .8rem;
   display: flex;
   flex-direction: column;
   gap: 6px; /* space between lines */
@@ -37,11 +38,6 @@
 }
 
 .podcast-list-item {
-    font-size: 12x;
-  height: 21px;
-  width: 304px;
   font-weight: 400;
-//   font-size: 12px;
-  line-height: 330%;
   color: #000000;
 }

@@ -1,21 +1,30 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import But1 from "./components/But1";
-import But2 from "./components/But2";
+
+import Button from "./components/Button";
 import GradientText from "./components/GradientText";
 import InfoCard from "./components/InfoCard";
 import audioIcon from "./assets/audio.png";
-import Whitebutton from "./components/whitebutton";
 import PodcastCard from "./components/podcastCard";
 import FeatureCard from "./components/FeatureCard";
+import FAQPage from "./Pages/FAQPage";
+
 import Footer from "./Pages/Footer";
 const App: React.FC = () => {
   return (
     <div style={{ background: "black", display: "flex", flexDirection: "column", }}>
-      <But1 />
-      <But2 />
-      <Whitebutton />
+      <Button text="Get Started" variant="primary" />
+      <br />
+      <br />
+      <Button text="Get Started" variant="secondary" />
+      <br />
+      <br />
+      <Button text="Get Started" variant="white" />
+      <br />
+      <br />
       <GradientText text="Get Started" />
+      <br />
+      <br />
       <div style={{ padding: "20px" }}>
         <InfoCard
           icon={audioIcon}
@@ -24,6 +33,8 @@ const App: React.FC = () => {
           linkText="Low reach"
           linkUrl="#"
         />
+        <br />
+        <br />
         <PodcastCard
           title="Connect Your Podcast"
           description="Just paste your RSS feed - works with any host"
@@ -33,20 +44,27 @@ const App: React.FC = () => {
             "No manual uploading"
           ]}
         />
+        <br />
+        <br />
         
         <FeatureCard
           title="Smart Content Extraction"
           description="Post to Facebook, Twitter, LinkedIn and more with one click"
           iconSrc={audioIcon} // replace with actual icon URL
         />
+        <br />
+        <br />
       </div>
 
       {/* Link to FAQ Page */}
-      <div style={{ padding: "20px" }}>
+      {/* <div style={{ padding: "20px" }}>
         <Link to="/faq" style={{ color: "white", textDecoration: "underline" }}>
           View All FAQs
         </Link>
-      </div>
+      </div> */}
+
+        <FAQPage />
+
       <Footer />
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import "./ButtonStyles.css";
+import "../styles/GradientButton.css";
 
 interface GradientTextProps {
   text: string;

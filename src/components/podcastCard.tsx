@@ -16,9 +16,9 @@ const PodcastCard: React.FC<PodcastCardProps> = ({ title, description, list }) =
       {/* Multi-line list */}
       <div className="podcast-list">
         {list.map((item, index) => (
-            <div key={index} className="podcast-list-item">
+            <span key={index} className="podcast-list-item">
             {item}
-            </div>
+            </span>
         ))}
         </div>
 
