@@ -1,0 +1,71 @@
+.info-card {
+  /* display: flex; */
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 1.5rem;
+  /* border: 1px solid #9c9b9b;
+  border-bottom: 3px solid #9c9b9b;
+  border-right: 0px; */
+  border-radius: 20px;
+  background: #fff;
+  width: 400px;
+  height: 150px;
+  /* shadow effect */
+  box-shadow: 2px 5px 15px rgb(102, 99, 99);
+}
+
+.icon-container {
+  width: 30px;
+  height: 30px;
+  /* border-radius: 50%; */
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-image {
+  width: 30px;
+  height: 30px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-title {
+  font-family: "Geist", sans-serif;
+  font-weight: 600; /* semibold */
+  font-size: 20px;
+  margin-top: 1.25rem;
+  margin-bottom: .25rem;
+  color: #000000ff;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+}
+
+.card-description {
+  font-family: "Geist", sans-serif;
+  /* font-weight: 400; */
+  font-size: 14px;
+  margin-top: 0;
+  width: 95%;
+  color: #555;
+}
+
+.card-link {
+  font-family: "Geist", sans-serif;
+  color: #6b26d8;
+  font-weight: 600;
+  font-size: 14px;
+  /* margin-bottom: 95rem; */
+  padding-top: 10px;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  color: #8a56dd;
+}

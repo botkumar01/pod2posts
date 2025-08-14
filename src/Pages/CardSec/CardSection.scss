@@ -1,0 +1,13 @@
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap; // allows natural wrapping before media query
+
+  // On small screens → stack vertically
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+button.primary {
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(90deg, #6B26D8, #DD7F41);
+  transition: background 0.3s ease;
+}
+
+button.secondary {
+  width: 205px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: linear-gradient(90deg, #DD7F41, #6B26D8);
+  transition: background 0.3s ease;
+}
+
+.btn {
+  border-radius: 50px;
+  max-width: max-content;
+  padding: .75rem 3rem;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+button.white {
+  border-radius: 50px;
+}
+button.white {
+  border: 1px solid rgb(224, 223, 223);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  background: white;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+
+  /* Add shadow only to the right and bottom sides */
+  box-shadow: 4px 4px 8px rgba(128, 128, 128, 0.4);
+}
+
+button.white:hover {
+  background: #f8f8f8; /* subtle hover background */
+}
+
+.gradient-text {
+  width: fit-content;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  /* semibold */
+  letter-spacing: 0px;
+  background: linear-gradient(90deg, #6B26D8, #DD7F41);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* For Firefox */
+}
