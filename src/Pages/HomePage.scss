@@ -10,6 +10,7 @@
     max-width: 90vw;
     overflow: hidden;
 
+    animation: fadeIn .5s ease;
 
     .hero {
         display: flex;
@@ -446,4 +447,16 @@
         
     }
     
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
 }
