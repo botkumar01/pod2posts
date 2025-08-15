@@ -17,6 +17,14 @@
 }
 
 @font-face {
+  font-family: "Geist";
+  src: url('/fonts/Geist/webfonts/Geist-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Geist';
   src: url('/fonts/Geist/webfonts/Geist-Bold.woff2') format('woff2');
   font-weight: 700;
@@ -50,6 +58,7 @@
 
   color-scheme: light dark;
   color: rgba(10, 10, 10, 0.9);
+  background-color: #f0f0f0;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

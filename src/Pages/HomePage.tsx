@@ -16,8 +16,44 @@ const HomePage: React.FC = () => {
         ]}
       />
 
+      <div className="hero">
+        <h1>
+            Grow Your Podcast Audience 1x Faster With Visual Content
+        </h1>
+        <h3>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem illum eaque dignissimos. Excepturi doloribus consectetur tempore officia provident ab optio.
+        </h3>
+        <div className="cta">
+            <Button variant="white" text="Watch Demo" />
+            <Button variant="primary" text="Get Started" />
+        </div>
+      </div>
 
-      <h1>Welcome to the Home Page</h1>
+      <div className="placeholderImage">
+      </div>
+
+      <div className="about">
+        <div className="aboutImage left">
+            <span className="title">About PodToPosts</span>
+            <div>
+                <h2 className="boldText">
+                    1K+
+                </h2>
+                <span className="subtext">
+                    Pods converted to Posts
+                </span>
+            </div>
+        </div>
+        <div className="aboutText right">
+            <h2>
+                Turn your best podcast moments into social media posts
+                that actually get shared. No design skills needed.
+                Just 2 minutes per episode.
+            </h2>
+            <Button variant="primary" text="Read about PodToPosts" />
+
+        </div>
+      </div>
       
     </div>
   );
