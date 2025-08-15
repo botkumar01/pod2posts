@@ -1,0 +1,218 @@
+.supercharge-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7409ff1c;
+  border-radius: 26px;
+  width: 80%;
+  margin: 15px auto; // ✅ centers the section
+  position: relative;
+
+
+  .supercharge-content {
+    flex: 1;
+    z-index: 2;
+    margin: 1rem;
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #6B26D8, #3A0086);
+  -webkit-background-clip: text; /* for Chrome, Safari */
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent; /* fallback */
+}
+
+  }
+
+  .supercharge-image {
+    flex: 1;
+    scale: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+      max-width: 300px;
+      height: auto;
+      background-color: #591fb600;
+      z-index: 1;
+    }
+
+    .fade-overlay {
+      position: absolute;
+      inset: 0;
+    //   background: radial-gradient(circle, rgba(250,247,255,0) 20%, rgba(250,247,255,1) 100%);
+      pointer-events: none;
+      z-index: 2;
+    }
+  }
+}
+/* Large screens (default) - No changes needed since it's already flex row */
+
+/* 1200px and below - slight adjustments for large tablets / small laptops */
+/* Large screens (default) - no change */
+
+/* 1200px and below */
+@media (max-width: 1200px) {
+  .supercharge-section {
+    .supercharge-content h2 {
+      font-size: 26px; /* slightly smaller */
+    }
+  }
+}
+
+/* 992px and below - tablets */
+@media (max-width: 992px) {
+  .supercharge-section {
+    .supercharge-content h2 {
+      font-size: 24px;
+    }
+  }
+}
+
+/* 768px and below - small tablets / large phones */
+@media (max-width: 768px) {
+  .supercharge-section {
+    // flex-direction: column;
+    text-align: center;
+
+    .supercharge-content {
+      margin-bottom: 1.5rem;
+
+      h2 {
+        font-size: 20px; /* smaller for better fit */
+      }
+    }
+
+    .supercharge-image img {
+      max-width: 200px;
+    }
+  }
+}
+@media (max-width: 710px) {
+  .supercharge-section {
+    // flex-direction: column;
+    text-align: center;
+
+    .supercharge-content {
+      margin-bottom: 1rem;
+
+      h2 {
+        font-size: 18px; /* smaller for better fit */
+      }
+    }
+
+    .supercharge-image img {
+      max-width: 180px;
+    }
+  }
+}
+
+/* 500px and below - mobile layout with image below text */
+@media (max-width: 650px) {
+  .supercharge-section {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* ✅ keeps image inside card */
+
+    .supercharge-content {
+      margin-top: 1rem;
+      position: relative;
+      z-index: 2; /* keep text above image */
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    .supercharge-image {
+      position: absolute;
+      top: 0;
+      left: 40%;
+      width: 70%;
+      height: 100%; /* ✅ fill section */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.4;
+      z-index: 1;
+
+      img {
+        width: 80%; /* ✅ scale to fit inside */
+        height: auto;
+        max-width: none; /* let width control scaling */
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .supercharge-section {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* ✅ keeps image inside card */
+
+    .supercharge-content {
+      margin-top: 1rem;
+      position: relative;
+      z-index: 2; /* keep text above image */
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    .supercharge-image {
+      position: absolute;
+      top: 0;
+      left: 45%;
+      width: 80%;
+      
+      height: 100%; /* ✅ fill section */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.4;
+      z-index: 1;
+
+      img {
+        width: 90%; /* ✅ scale to fit inside */
+        height: auto;
+        max-width: none; /* let width control scaling */
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .but button {
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .but button {
+    padding: 0.55rem 1.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .but button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .but button {
+    padding: 0.45rem 1rem;
+    font-size: 0.8rem;
+  }
+}
