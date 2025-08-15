@@ -1,8 +1,11 @@
 import type { JSX } from "react";
+import { useState, useRef } from "react";
 
 import "./Nav.scss";
 
 import siteIcon from "../../assets/logo.png";
+
+import { Menu } from "lucide-react";
 
 type NavItem = {
   title: string | JSX.Element;
@@ -10,27 +13,43 @@ type NavItem = {
 };
 
 const Nav: React.FC<{ items: NavItem[] }> = ({ items }) => {
-  return (
-    <nav className="siteNav">
 
+	const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+	const mobileMenuRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <>
+      <nav className="siteNav">
         <div className="platformIcon">
-            <img src={siteIcon} alt="Platform Icon" />
-            <span>PodToPosts</span>
+          <img src={siteIcon} alt="Platform Icon" />
+          <span>PodToPosts</span>
         </div>
 
-      <ul>
-        {items.map((item) => (
-          <li key={item.link}>
-            <a href={item.link}>{item.title}</a>
-          </li>
-        ))}
-      </ul>
+        <ul className="desktopMenu">
+          {items.map((item) => (
+            <li key={item.link}>
+              <a href={item.link}>{item.title}</a>
+            </li>
+          ))}
+        </ul>
 
-      <div className="hamburger">
-        
+        <div>{/* for spacing */}</div>
+
+        <div className={`hamburger ${isMobileMenuOpen ? "open" : ""}`} ref={mobileMenuRef} onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
+          <Menu />
+        </div>
+      </nav>
+      {/* Mobile Menu, absolutely positioned */}
+      <div className={`mobileMenu ${(isMobileMenuOpen) ? "open" : ""}`}>
+        <ul>
+          {items.map((item) => (
+            <li key={item.link}>
+              <a href={item.link}>{item.title}</a>
+            </li>
+          ))}
+        </ul>
       </div>
-      
-    </nav>
+    </>
   );
 };
 
