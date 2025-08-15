@@ -99,6 +99,7 @@ const HomePage: React.FC = () => {
             description="Social media algorithms favor visual content over audio links"
             linkText="Low Reach"
             linkUrl="#"
+            delay={0.5}
           />
 
           <InfoCard
@@ -107,6 +108,7 @@ const HomePage: React.FC = () => {
             description="Your amazing content gets lost in the podcast noise."
             linkText="No Discovery"
             linkUrl="#"
+            delay={0.8}
           />
 
           <InfoCard
@@ -115,6 +117,7 @@ const HomePage: React.FC = () => {
             description="You focus on episodes but have no time for marketing"
             linkText="Show Growth"
             linkUrl="#"
+            delay={1}
           />
         </section>
 
