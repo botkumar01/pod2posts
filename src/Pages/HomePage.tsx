@@ -217,8 +217,9 @@ const HomePage: React.FC = () => {
 
         <FAQPage />
         <SuperchargeSection />
+        <Footer />
       </div>
-      <Footer />
+     
     </>
   );
 };
