@@ -48,20 +48,20 @@ const HomePage: React.FC = () => {
         }}
       >
         Grow Your Podcast Audience <br/>{" "}
-        <span
-          style={{
-  fontFamily: "Geist, sans-serif",
-  background: "linear-gradient(90deg, #7541ddb5, #8e2de2)",
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-  fontWeight: 500,
-  display: "inline",
-}}
-
-        >
-          1x Faster
-        </span>{" "}
-          With Visual Content
+         <span
+                  style={{
+          fontFamily: "Geist, sans-serif",
+          background: "linear-gradient(90deg, #8e2de2, #a1391689)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          fontWeight: 500,
+          display: "inline",
+        }}
+        
+                >
+                  1x Faster
+                </span>{" "}
+        With Visual Content
       </h1>          <h3>
            Turn your best podcast moments into social media posts that actually get shared.
   No design skills needed. Just 2 minutes per episode.
