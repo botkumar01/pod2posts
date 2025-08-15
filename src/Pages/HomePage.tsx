@@ -9,6 +9,7 @@ import FAQPage from "./FAQPage";
 import PodcastCard from "../components/podcastCard";
 import FeatureCard from "../components/FeatureCard";
 import SuperchargeSection from "./SuperchargeSection/SuperchargeSection";
+import Footer from "./Footer";
 
 import audioIcon from "../assets/audio.png";
 import girlPod from "../assets/Girl.png";
@@ -37,11 +38,33 @@ const HomePage: React.FC = () => {
         />
 
         <section className="hero">
-          <h1>Grow Your Podcast Audience 1x Faster With Visual Content</h1>
-          <h3>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-            illum eaque dignissimos. Excepturi doloribus consectetur tempore
-            officia provident ab optio.
+ <h1
+        style={{
+          margin: "0 0 2rem 0",
+          fontSize: "59px",
+            fontWeight: 500,
+          color: "Black",
+          textAlign: "center",
+        }}
+      >
+        Grow Your Podcast Audience <br/>{" "}
+        <span
+          style={{
+  fontFamily: "Geist, sans-serif",
+  background: "linear-gradient(90deg, #7541ddb5, #8e2de2)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  fontWeight: 500,
+  display: "inline",
+}}
+
+        >
+          1x Faster
+        </span>{" "}
+          With Visual Content
+      </h1>          <h3>
+           Turn your best podcast moments into social media posts that actually get shared.
+  No design skills needed. Just 2 minutes per episode.
           </h3>
           <div className="cta">
             <Button variant="white" text="Watch Demo" />
@@ -217,8 +240,14 @@ const HomePage: React.FC = () => {
 
         <FAQPage />
         <SuperchargeSection />
+            <br />
+        <br />
+        <br />
+           
+  
+       
       </div>
-{/*       <Footer /> */}
+      <Footer />
     </>
   );
 };

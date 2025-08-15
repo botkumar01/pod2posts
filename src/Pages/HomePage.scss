@@ -1,13 +1,13 @@
 
 .homePage {
     // account for nav.
-    margin: 0 auto;
+    // margin: 0 auto;
     margin-top: 6rem;
 
     background-color: #fdfdfd;
     box-sizing: border-box;
-    width: 90vw;
-    max-width: 90vw;
+    width: 100%;
+    // max-width: 90vw;
     overflow: hidden;
 
     animation: fadeIn .5s ease;
@@ -54,7 +54,7 @@
         display: flex;
         justify-content: space-between;
         padding: 2rem 0;
-        margin: 4rem 0;
+        margin: 4rem 2rem;
 
         .aboutImage {
             flex-grow: 1;
@@ -97,7 +97,7 @@
     .infoCardPanel {
         display: flex;
         gap: 1rem;
-        margin: 6rem 0;
+        margin: 6rem 2rem;
         justify-content: space-between;
 
         .info-card {
@@ -109,7 +109,7 @@
     .vcmSection {
         display: flex;
         gap: 1rem;
-
+        margin: 2rem;
         h1 {
             margin: 0;
             font-size: 2rem;
@@ -171,7 +171,7 @@
     }
 
     .floatingCards {
-        margin: 4rem 0;
+        margin: 4rem 2rem;
 
         h2 {
             margin: 0 !important;
@@ -447,7 +447,50 @@
         
     }
     
-}
+}@media (max-width: 900px) {
+    h1 {
+      font-size: 2.5rem; // 40px
+    }
+    h3 {
+      font-size: 1rem; // 16px
+    }
+  }
+
+  @media (max-width: 750px) {
+    h1 {
+      font-size: 2.125rem; // 34px
+    }
+    h3 {
+      font-size: 0.9375rem; // 15px
+    }
+    .cta {
+      gap: 0.75rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.875rem; // 30px
+    }
+    h3 {
+      font-size: 0.875rem; // 14px
+    }
+    .cta {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 1.5rem; // 24px
+    }
+    h3 {
+      font-size: 0.75rem; // 12px
+    }
+    // padding: 2rem 0;
+  }
+
 
 
 @keyframes fadeIn {
