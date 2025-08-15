@@ -10,7 +10,7 @@ import FeatureCard from "./components/FeatureCard";
 import FAQPage from "./Pages/FAQPage";
 import SuperchargeSection from "./Pages/SuperchargeSection/SuperchargeSection";
 
-import Footer from "./Pages/Footer";
+// import Footer from "./Pages/Footer";
 const App: React.FC = () => {
   return (
     <div style={{ background: "black", display: "flex", flexDirection: "column", }}>
@@ -69,7 +69,7 @@ const App: React.FC = () => {
           <SuperchargeSection />
 
 
-      <Footer />
+{/*       <Footer /> */}
     </div>
   );
 };
