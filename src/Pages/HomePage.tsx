@@ -161,38 +161,38 @@ const HomePage: React.FC = () => {
               <div className="row row1 small">
                 <FeatureCard
                   title="Smart Content Extraction"
-                  description="Post to Facebook, Twitter, LinkedIn and more with one click"
+                  description="AI finds the most shareable moments from your episodes"
                   iconSrc={audioIcon}
                 />
                 <FeatureCard
-                  title="Smart Content Extraction"
-                  description="Post to Facebook, Twitter, LinkedIn and more with one click"
+                  title="Professional Templates"
+                  description="Designs that make you look like you hired a team"
                   iconSrc={audioIcon}
                 />
               </div>
 
               <div className="row row2 long">
                 <FeatureCard
-                  title="Smart Content Extraction"
-                  description="Post to Facebook, Twitter, LinkedIn and more with one click"
+                  title="Growth-Optimized Formats"
+                  description="LinkedIn carousels, Instagram multi-posts, X graphics"
                   iconSrc={audioIcon}
                 />
                 <FeatureCard
-                  title="Smart Content Extraction"
-                  description="Post to Facebook, Twitter, LinkedIn and more with one click"
+                  title="Engagement-Driving Captions"
+                  description="AI writes posts that spark conversations, drive discovery."
                   iconSrc={audioIcon}
                 />
               </div>
 
               <div className="row row3 small">
                 <FeatureCard
-                  title="Smart Content Extraction"
-                  description="Post to Facebook, Twitter, LinkedIn and more with one click"
+                  title="Promotion Calendar"
+                  description="Plan your content weeks ahead for consistent growth"
                   iconSrc={audioIcon}
                 />
                 <FeatureCard
-                  title="Smart Content Extraction"
-                  description="Post to Facebook, Twitter, LinkedIn and more with one click"
+                  title="New Audience Discovery"
+                  description="Reach people who would never search for podcasts"
                   iconSrc={audioIcon}
                 />
               </div>
