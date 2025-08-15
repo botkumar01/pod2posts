@@ -23,4 +23,3 @@ const SuperchargeSection = () => {
   );       
 } 
 export default SuperchargeSection;
-

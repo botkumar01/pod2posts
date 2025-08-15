@@ -152,6 +152,7 @@ const HomePage: React.FC = () => {
                   ]}
                   number={1}
                   position="bottom-left"
+                  delay = {0.2}
                 />
                 <PodcastCard
                   title="Share & Watch Your Audience Grow"
@@ -163,6 +164,7 @@ const HomePage: React.FC = () => {
                   ]}
                   number={3}
                   position="bottom-left"
+                  delay = {0.4}
                 />
               </div>
               <div className="line"></div>
@@ -177,6 +179,7 @@ const HomePage: React.FC = () => {
                   ]}
                   number={2}
                   position="top-left"
+                  delay = {0.5}
                 />
               </div>
             </div>
