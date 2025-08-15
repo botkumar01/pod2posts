@@ -8,6 +8,7 @@ import audioIcon from "./assets/audio.png";
 import PodcastCard from "./components/podcastCard";
 import FeatureCard from "./components/FeatureCard";
 import FAQPage from "./Pages/FAQPage";
+import SuperchargeSection from "./Pages/SuperchargeSection/SuperchargeSection";
 
 import Footer from "./Pages/Footer";
 const App: React.FC = () => {
@@ -65,6 +66,8 @@ const App: React.FC = () => {
       </div> */}
 
         <FAQPage />
+          <SuperchargeSection />
+
 
       <Footer />
     </div>
