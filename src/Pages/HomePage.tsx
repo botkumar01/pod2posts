@@ -63,9 +63,8 @@ const HomePage: React.FC = () => {
         </span>{" "}
           With Visual Content
       </h1>          <h3>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
-            illum eaque dignissimos. Excepturi doloribus consectetur tempore
-            officia provident ab optio.
+           Turn your best podcast moments into social media posts that actually get shared.
+  No design skills needed. Just 2 minutes per episode.
           </h3>
           <div className="cta">
             <Button variant="white" text="Watch Demo" />
