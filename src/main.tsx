@@ -5,6 +5,7 @@ import App from "./App";
 
 import HomePage from "./Pages/HomePage";
 import FAQPage from "./Pages/FAQPage";
+import PricingPage from "./Pages/PricingPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/home" element={<HomePage />} />
+      <Route path="/pricing" element={<PricingPage />} />
       <Route path="/faq" element={<FAQPage />} />
     </Routes>
   </BrowserRouter>

@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
           items={[
             { title: "Platform", link: "/" },
             { title: "Solution", link: "/solution" },
-            { title: "Features", link: "/features" },
+            { title: "Pricing", link: "/pricing" },
             { title: "FAQ", link: "/faq" },
             { title: <Button variant="primary" />, link: "/cta" },
           ]}
