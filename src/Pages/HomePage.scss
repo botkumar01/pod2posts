@@ -20,7 +20,7 @@
 
         h1 {
             font-weight: 500;
-            font-size: 3.5rem;
+            font-size: 3rem;
             text-align: center;
             width: min(800px, 90%);
             margin-bottom: 0;
@@ -336,6 +336,11 @@
 
                 h1 {
                     display: block;
+                    font-size: 1.6rem;
+
+                    span {
+                        font-size: 1.6rem;
+                    }
                 }
 
                 img {
@@ -402,7 +407,7 @@
 
             h2 {
                 text-align: center;
-                font-size: 1.5rem !important;
+                font-size: 1.25rem !important;
                 margin-bottom: 1rem;
             }
 
@@ -410,7 +415,7 @@
                 justify-content: center;
 
                 span {
-                    font-size: 1.5rem !important;
+                    font-size: 1.25rem !important;
                 }
             }
 
@@ -426,7 +431,8 @@
                         gap: 2rem;
 
                         .Fcard {
-                            min-width: 70%;
+                            position: relative;
+                            width: 100% !important;
                         }
                     }
                 }

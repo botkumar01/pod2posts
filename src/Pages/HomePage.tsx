@@ -15,6 +15,13 @@ import girlPod from "../assets/Girl.png";
 import convo from "../assets/convo.png";
 import logo from "../assets/BigLogo.png";
 
+import growIcon from "../assets/small_icons/i1.png";
+import peopleIcon from "../assets/small_icons/i2.png";
+
+import commentIcon from "../assets/small_icons/i4.png";
+import calendarIcon from "../assets/small_icons/i5.png";
+
+
 const HomePage: React.FC = () => {
   return (
     <>
@@ -176,12 +183,12 @@ const HomePage: React.FC = () => {
                 <FeatureCard
                   title="Growth-Optimized Formats"
                   description="LinkedIn carousels, Instagram multi-posts, X graphics"
-                  iconSrc={audioIcon}
+                  iconSrc={growIcon}
                 />
                 <FeatureCard
                   title="Engagement-Driving Captions"
                   description="AI writes posts that spark conversations, drive discovery."
-                  iconSrc={audioIcon}
+                  iconSrc={commentIcon}
                 />
               </div>
 
@@ -189,12 +196,12 @@ const HomePage: React.FC = () => {
                 <FeatureCard
                   title="Promotion Calendar"
                   description="Plan your content weeks ahead for consistent growth"
-                  iconSrc={audioIcon}
+                  iconSrc={calendarIcon}
                 />
                 <FeatureCard
                   title="New Audience Discovery"
                   description="Reach people who would never search for podcasts"
-                  iconSrc={audioIcon}
+                  iconSrc={peopleIcon}
                 />
               </div>
             </div>
