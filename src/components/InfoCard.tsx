@@ -1,12 +1,14 @@
 import React from "react";
+import MotionDiv from "./MotionDiv"; // import the reusable MotionDiv
 import "./InfoCard.css";
 
 interface InfoCardProps {
-  icon: string; // path to image
+  icon: string;
   title: string;
   description: string;
   linkText: string;
   linkUrl: string;
+  delay?: number; // optional delay for animation
 }
 
 const InfoCard: React.FC<InfoCardProps> = ({
@@ -14,24 +16,25 @@ const InfoCard: React.FC<InfoCardProps> = ({
   title,
   description,
   linkText,
-  linkUrl
+  linkUrl,
+  delay = 0
 }) => {
   return (
-    <div className="info-card">
-      {/* Icon container */}
-      <div className="icon-container">
-        <img src={icon} alt="icon" className="icon-image" />
-      </div>
+    <MotionDiv delay={delay}>
+      <div className="info-card">
+        <div className="icon-container">
+          <img src={icon} alt="icon" className="icon-image" />
+        </div>
 
-      {/* Text container */}
-      <div className="text-container">
-        <h3 className="card-title">{title}</h3>
-        <p className="card-description">{description}</p>
-        <a href={linkUrl} className="card-link">
-          {linkText}
-        </a>
+        <div className="text-container">
+          <h3 className="card-title">{title}</h3>
+          <p className="card-description">{description}</p>
+          <a href={linkUrl} className="card-link">
+            {linkText}
+          </a>
+        </div>
       </div>
-    </div>
+    </MotionDiv>
   );
 };
 
