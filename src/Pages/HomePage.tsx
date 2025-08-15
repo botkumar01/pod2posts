@@ -9,6 +9,7 @@ import FAQPage from "./FAQPage";
 import PodcastCard from "../components/podcastCard";
 import FeatureCard from "../components/FeatureCard";
 import SuperchargeSection from "./SuperchargeSection/SuperchargeSection";
+import Footer from "./Footer";
 
 import audioIcon from "../assets/audio.png";
 import girlPod from "../assets/Girl.png";
