@@ -7,10 +7,12 @@ import GradientText from "../components/GradientText";
 import Footer from "./Footer";
 import FAQPage from "./FAQPage";
 import PodcastCard from "../components/podcastCard";
+import FeatureCard from "../components/FeatureCard";
 
 import audioIcon from "../assets/audio.png";
 import girlPod from "../assets/Girl.png";
-
+import convo from "../assets/convo.png";
+import logo from "../assets/BigLogo.png";
 
 const HomePage: React.FC = () => {
   return (
@@ -22,52 +24,44 @@ const HomePage: React.FC = () => {
             { title: "Solution", link: "/solution" },
             { title: "Features", link: "/features" },
             { title: "FAQ", link: "/faq" },
-            { title: <Button variant="primary" />, link: "/cta" }
+            { title: <Button variant="primary" />, link: "/cta" },
           ]}
         />
 
         <section className="hero">
-          <h1>
-              Grow Your Podcast Audience 1x Faster With Visual Content
-          </h1>
+          <h1>Grow Your Podcast Audience 1x Faster With Visual Content</h1>
           <h3>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem illum eaque dignissimos. Excepturi doloribus consectetur tempore officia provident ab optio.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
+            illum eaque dignissimos. Excepturi doloribus consectetur tempore
+            officia provident ab optio.
           </h3>
           <div className="cta">
-              <Button variant="white" text="Watch Demo" />
-              <Button variant="primary" text="Get Started" />
+            <Button variant="white" text="Watch Demo" />
+            <Button variant="primary" text="Get Started" />
           </div>
         </section>
 
-        <section className="placeholderImage">
-        </section>
+        <section className="placeholderImage"></section>
 
         <section className="about">
           <div className="aboutImage left">
-              <span className="title">About PodToPosts</span>
-              <div>
-                  <h2 className="boldText">
-                      1K+
-                  </h2>
-                  <span className="subtext">
-                      Pods converted to Posts
-                  </span>
-              </div>
+            <span className="title">About PodToPosts</span>
+            <div>
+              <h2 className="boldText">1K+</h2>
+              <span className="subtext">Pods converted to Posts</span>
+            </div>
           </div>
           <div className="aboutText right">
-              <h2>
-                  Turn your best podcast moments into social media posts
-                  that actually get shared. No design skills needed.
-                  Just 2 minutes per episode.
-              </h2>
-              <Button variant="primary" text="Read about PodToPosts" />
-
+            <h2>
+              Turn your best podcast moments into social media posts that
+              actually get shared. No design skills needed. Just 2 minutes per
+              episode.
+            </h2>
+            <Button variant="primary" text="Read about PodToPosts" />
           </div>
         </section>
-        
-        
-        <section className="infoCardPanel">
 
+        <section className="infoCardPanel">
           <InfoCard
             icon={audioIcon}
             title="Audio-Only Posts Get Ignored"
@@ -91,11 +85,9 @@ const HomePage: React.FC = () => {
             linkText="Show Growth"
             linkUrl="#"
           />
-
         </section>
 
         <section className="vcmSection">
-
           <div className="vcmImage left">
             <h1>
               The Secret Top Podcasters Use:
@@ -106,9 +98,7 @@ const HomePage: React.FC = () => {
           </div>
 
           <div className="vcmText right">
-            <span className="subtext">
-              From Podcast to Viral Posts
-            </span>
+            <span className="subtext">From Podcast to Viral Posts</span>
 
             <h1>
               The Secret Top Podcasters Use:
@@ -124,7 +114,7 @@ const HomePage: React.FC = () => {
                   list={[
                     "Works with any podcast platform",
                     "Automatic episode detection",
-                    "No manual uploading"
+                    "No manual uploading",
                   ]}
                   number={1}
                   position="bottom-left"
@@ -135,14 +125,13 @@ const HomePage: React.FC = () => {
                   list={[
                     "Algorithm optimized formats",
                     "Multiple export options",
-                    "Consistent branding"
+                    "Consistent branding",
                   ]}
                   number={3}
                   position="bottom-left"
                 />
               </div>
-              <div className="line">
-              </div>
+              <div className="line"></div>
               <div className="row row2">
                 <PodcastCard
                   title="AI Creates Visual Content"
@@ -150,20 +139,73 @@ const HomePage: React.FC = () => {
                   list={[
                     "Eye-catching carousels",
                     "Shareable quote cards",
-                    "Engaging social posts"
+                    "Engaging social posts",
                   ]}
                   number={2}
                   position="top-left"
                 />
               </div>
-              
             </div>
-
           </div>
-
         </section>
 
-        <br /><br /><br />
+        <section className="floatingCards">
+          <h2>Features That Drive Growth</h2>
+          <div className="imageAndText">
+            <img src={convo} alt="" />
+            <GradientText text="Explore the Posts by Podtoposts" />
+          </div>
+
+          <div className="cardsContainer">
+            <div className="floaters">
+              <div className="row row1 small">
+                <FeatureCard
+                  title="Smart Content Extraction"
+                  description="Post to Facebook, Twitter, LinkedIn and more with one click"
+                  iconSrc={audioIcon}
+                />
+                <FeatureCard
+                  title="Smart Content Extraction"
+                  description="Post to Facebook, Twitter, LinkedIn and more with one click"
+                  iconSrc={audioIcon}
+                />
+              </div>
+
+              <div className="row row2 long">
+                <FeatureCard
+                  title="Smart Content Extraction"
+                  description="Post to Facebook, Twitter, LinkedIn and more with one click"
+                  iconSrc={audioIcon}
+                />
+                <FeatureCard
+                  title="Smart Content Extraction"
+                  description="Post to Facebook, Twitter, LinkedIn and more with one click"
+                  iconSrc={audioIcon}
+                />
+              </div>
+
+              <div className="row row3 small">
+                <FeatureCard
+                  title="Smart Content Extraction"
+                  description="Post to Facebook, Twitter, LinkedIn and more with one click"
+                  iconSrc={audioIcon}
+                />
+                <FeatureCard
+                  title="Smart Content Extraction"
+                  description="Post to Facebook, Twitter, LinkedIn and more with one click"
+                  iconSrc={audioIcon}
+                />
+              </div>
+            </div>
+            <div className="overlay">
+              <img src={logo} alt="" />
+            </div>
+          </div>
+        </section>
+
+        <br />
+        <br />
+        <br />
 
         <FAQPage />
       </div>

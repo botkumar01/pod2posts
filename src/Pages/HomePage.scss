@@ -1,7 +1,5 @@
 
-
 .homePage {
-
     // account for nav.
     margin: 0 auto;
     margin-top: 6rem;
@@ -160,12 +158,86 @@
                     background-color: rgba(black, .05);
                     padding: 0 1rem;
                 }
+            }
+        }
 
-                
+    }
+
+    .floatingCards {
+        margin: 4rem 0;
+
+        h2 {
+            margin: 0 !important;
+            font-size: 2rem;
+        }
+
+        .imageAndText {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            img {
+                height: 30px;
+            }
+            span {
+                font-size: 2rem;
+            }
+        }
+
+        .cardsContainer {
+            position: relative;
+            max-height: max-content;
+            margin: 4rem 0;
+
+            .floaters {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 4rem;
+
+                .row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    &.small {
+                        width: 90%;
+                        max-width: 90%;
+                    }
+
+                    &.long {
+                        width: 100%;
+                        max-width: 100%;
+                    }
+
+                    .Fcard {
+                        scale: .8;
+                    }
+                }
+
             }
 
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 1rem;
+                z-index: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                }
+            }
         }
-            
     }
 
 }
@@ -314,6 +386,42 @@
 
                 .podcast-card.n2::before {
                     content: "3" !important;
+                }
+
+            }
+        }
+
+        .floatingCards {
+
+            h2 {
+                text-align: center;
+                font-size: 1.5rem !important;
+                margin-bottom: 1rem;
+            }
+
+            .imageAndText {
+                justify-content: center;
+
+                span {
+                    font-size: 1.5rem !important;
+                }
+            }
+
+            .cardsContainer {
+
+                .floaters {
+                    gap: 2rem;
+
+                    .row {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        flex-direction: column;
+                        gap: 2rem;
+                    }
+                }
+
+                .overlay {
+                    display: none;
                 }
 
             }
