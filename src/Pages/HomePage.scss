@@ -6,8 +6,8 @@
 
     background-color: #fdfdfd;
     box-sizing: border-box;
-    width: 90vw;
-    max-width: 90vw;
+    width: 100%;
+    // max-width: 90vw;
     overflow: hidden;
 
 
@@ -446,4 +446,49 @@
         
     }
     
+}
+.hero {
+  h1 {
+    font-size: 59px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  @media (max-width: 900px) {
+    h1 {
+      font-size: 50px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 750px) {
+    h1 {
+      font-size: 42px;
+    }
+    h3 {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 36px;
+    }
+    h3 {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 28px;
+    }
+    h3 {
+      font-size: 12px;
+    }
+  }
 }
