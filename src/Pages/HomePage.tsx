@@ -41,7 +41,7 @@ const HomePage: React.FC = () => {
  <h1
         style={{
           margin: "0 0 2rem 0",
-          fontSize: "62px",
+          fontSize: "59px",
             fontWeight: 500,
           color: "Black",
           textAlign: "center",
