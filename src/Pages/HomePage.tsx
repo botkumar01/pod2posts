@@ -4,7 +4,7 @@ import Nav from "../components/Nav/Nav";
 import Button from "../components/Button";
 import InfoCard from "../components/InfoCard";
 import GradientText from "../components/GradientText";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import FAQPage from "./FAQPage";
 import PodcastCard from "../components/podcastCard";
 import FeatureCard from "../components/FeatureCard";
@@ -209,7 +209,7 @@ const HomePage: React.FC = () => {
 
         <FAQPage />
       </div>
-      <Footer />
+{/*       <Footer /> */}
     </>
   );
 };
