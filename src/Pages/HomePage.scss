@@ -53,8 +53,8 @@
     .about {
         display: flex;
         justify-content: space-between;
-        // align-items: center;
         padding: 2rem 0;
+        margin: 4rem 0;
 
         .aboutImage {
             flex-grow: 1;
@@ -92,6 +92,14 @@
                 font-weight: 600 !important;
             }
         }
+    }
+
+    .infoCardPanel {
+        display: flex;
+        gap: 1rem;
+        margin: 6rem 0;
+        justify-content: space-between;
+        align-items: center;
     }
 
 }
@@ -159,6 +167,10 @@
             
         }
 
+        .infoCardPanel {
+            flex-direction: column;
+            gap: 2rem;
+        }
         
     }
     

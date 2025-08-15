@@ -2,6 +2,12 @@ import "./HomePage.scss";
 
 import Nav from "../components/Nav/Nav";
 import Button from "../components/Button";
+import InfoCard from "../components/InfoCard";
+import GradientText from "../components/GradientText";
+
+
+import audioIcon from "../assets/audio.png";
+
 
 const HomePage: React.FC = () => {
   return (
@@ -16,7 +22,7 @@ const HomePage: React.FC = () => {
         ]}
       />
 
-      <div className="hero">
+      <section className="hero">
         <h1>
             Grow Your Podcast Audience 1x Faster With Visual Content
         </h1>
@@ -27,12 +33,12 @@ const HomePage: React.FC = () => {
             <Button variant="white" text="Watch Demo" />
             <Button variant="primary" text="Get Started" />
         </div>
-      </div>
+      </section>
 
-      <div className="placeholderImage">
-      </div>
+      <section className="placeholderImage">
+      </section>
 
-      <div className="about">
+      <section className="about">
         <div className="aboutImage left">
             <span className="title">About PodToPosts</span>
             <div>
@@ -53,8 +59,52 @@ const HomePage: React.FC = () => {
             <Button variant="primary" text="Read about PodToPosts" />
 
         </div>
-      </div>
+      </section>
       
+      
+      <section className="infoCardPanel">
+
+        <InfoCard
+          icon={audioIcon}
+          title="Audio-Only Posts Get Ignored"
+          description="Social media algorithms favor visual content over audio links"
+          linkText="Low reach"
+          linkUrl="#"
+        />
+
+        <InfoCard
+          icon={audioIcon}
+          title="Audio-Only Posts Get Ignored"
+          description="Social media algorithms favor visual content over audio links"
+          linkText="Low reach"
+          linkUrl="#"
+        />
+
+        <InfoCard
+          icon={audioIcon}
+          title="Audio-Only Posts Get Ignored"
+          description="Social media algorithms favor visual content over audio links"
+          linkText="Low reach"
+          linkUrl="#"
+        />
+
+      </section>
+
+      <section className="vcmSection">
+
+        <div className="vcmImage left">
+          <h1>
+            The Secret Top Podcasters Use:
+            <GradientText text="Visual Content Marketing" />
+          </h1>
+
+          <img src="" alt="" />
+
+        </div>
+
+
+      </section>
+
     </div>
   );
 };
