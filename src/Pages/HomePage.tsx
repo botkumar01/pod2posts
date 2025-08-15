@@ -245,9 +245,9 @@ const HomePage: React.FC = () => {
         <br />
            
   
-        <Footer />
+       
       </div>
-     
+      <Footer />
     </>
   );
 };
