@@ -38,8 +38,31 @@ const HomePage: React.FC = () => {
         />
 
         <section className="hero">
-          <h1>Grow Your Podcast Audience 1x Faster With Visual Content</h1>
-          <h3>
+ <h1
+        style={{
+          margin: "0 0 2rem 0",
+          fontSize: "62px",
+            fontWeight: 500,
+          color: "Black",
+          textAlign: "center",
+        }}
+      >
+        Grow Your Podcast Audience <br/>{" "}
+        <span
+          style={{
+  fontFamily: "Geist, sans-serif",
+  background: "linear-gradient(90deg, #7541ddb5, #8e2de2)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  fontWeight: 500,
+  display: "inline",
+}}
+
+        >
+          3x Faster
+        </span>{" "}
+          With Visual Content
+      </h1>          <h3>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
             illum eaque dignissimos. Excepturi doloribus consectetur tempore
             officia provident ab optio.
