@@ -10,6 +10,7 @@ import PodcastCard from "../components/podcastCard";
 import FeatureCard from "../components/FeatureCard";
 import SuperchargeSection from "./SuperchargeSection/SuperchargeSection";
 import Footer from "./Footer";
+import MultiText from "../components/MultiText"; // adjust path
 
 import audioIcon from "../assets/audio.png";
 import girlPod from "../assets/Girl.png";
@@ -38,39 +39,25 @@ const HomePage: React.FC = () => {
         />
 
         <section className="hero">
- <h1
-        style={{
-          margin: "0 0 2rem 0",
-          fontSize: "59px",
-            fontWeight: 500,
-          color: "Black",
-          textAlign: "center",
-        }}
-      >
-        Grow Your Podcast Audience <br/>{" "}
-         <span
-                  style={{
-          fontFamily: "Geist, sans-serif",
-          background: "linear-gradient(90deg, #8e2de2, #a1391689)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-          fontWeight: 500,
-          display: "inline",
-        }}
-        
-                >
-                  1x Faster
-                </span>{" "}
-        With Visual Content
-      </h1>          <h3>
-           Turn your best podcast moments into social media posts that actually get shared.
-  No design skills needed. Just 2 minutes per episode.
-          </h3>
-          <div className="cta">
-            <Button variant="white" text="Watch Demo" />
-            <Button variant="primary" text="Get Started" />
-          </div>
-        </section>
+  <h1 className="hero-title">
+    Grow Your Podcast Audience <br />{" "}
+    <span className="hero-gradient">
+      <MultiText /> Faster
+    </span>{" "}
+    With Visual Content
+  </h1>
+
+  <h3 className="hero-subtitle">
+    Turn your best podcast moments into social media posts that actually get shared.
+    No design skills needed. Just 2 minutes per episode.
+  </h3>
+
+  <div className="cta">
+    <Button variant="white" text="Watch Demo" />
+    <Button variant="primary" text="Get Started" />
+  </div>
+</section>
+
 
         <section className="placeholderImage"></section>
 

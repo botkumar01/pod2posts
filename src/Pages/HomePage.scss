@@ -512,3 +512,67 @@
         filter: blur(0);
     }
 }
+.hero-title {
+  font-size: 4rem;  // default ~59px
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .hero-gradient {
+    font-size: 4rem;  // default ~59px
+    // font-family: "Geist, sans-serif";
+    background: linear-gradient(90deg, #8e2de2, #a1391689);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Large desktop */
+@media (max-width: 1440px) {
+  .hero-title {
+    font-size: 3.3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+}
+
+/* Medium desktop / tablet */
+@media (max-width: 1200px) {
+    
+  .hero-title {
+    scale: 0.9;
+  }
+  .hero-subtitle {
+    font-size: 8rem;
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile portrait / small phones */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.9rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
