@@ -176,11 +176,14 @@
         h2 {
             margin: 0 !important;
             font-size: 2rem;
+            text-align: center;
         }
 
         .imageAndText {
             display: flex;
             align-items: center;
+            max-width: max-content;
+            margin: 0 auto;
             gap: .5rem;
 
             img {
@@ -324,9 +327,11 @@
             flex-direction: column;
             align-items: center;
             margin-top: 4rem;
+            font-size: 1rem;
 
             h1 {
                 text-align: center;
+                font-size: 1rem;
             }
 
             .vcmImage {
@@ -408,15 +413,17 @@
 
             h2 {
                 text-align: center;
-                font-size: 1.25rem !important;
-                margin-bottom: 1rem;
+                font-size: 1rem !important;
+                margin-bottom: 1.5rem;
+                padding-left: 1rem;
             }
 
             .imageAndText {
+                margin-top: .5rem;
                 justify-content: center;
 
                 span {
-                    font-size: 1.25rem !important;
+                    font-size: 1rem !important;
                 }
             }
 
