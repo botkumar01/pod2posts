@@ -241,6 +241,12 @@ const HomePage: React.FC = () => {
 
         <FAQPage />
         <SuperchargeSection />
+            <br />
+        <br />
+        <br />
+            <br />
+        <br />
+  
         <Footer />
       </div>
      
