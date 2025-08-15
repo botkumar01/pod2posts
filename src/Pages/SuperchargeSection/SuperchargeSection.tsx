@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "./SuperchargeSection.scss";
 import Button from "../../components/Button.tsx";
 import Social from "../../assets/Social_Media.png"; // replace with actual path
@@ -23,3 +23,4 @@ const SuperchargeSection = () => {
   );       
 } 
 export default SuperchargeSection;
+
