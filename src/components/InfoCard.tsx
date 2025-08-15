@@ -1,5 +1,5 @@
 import React from "react";
-import MotionDiv from "./MotionDiv"; // import the reusable MotionDiv
+import { motion } from "framer-motion"; // import motion directly
 import "./InfoCard.css";
 
 interface InfoCardProps {
@@ -20,7 +20,13 @@ const InfoCard: React.FC<InfoCardProps> = ({
   delay = 0
 }) => {
   return (
-    <MotionDiv delay={delay}>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}          // start below
+      whileInView={{ opacity: 1, y: 0 }}      // animate to normal position
+      transition={{ delay, duration: 0.8, ease: "easeOut" }} // use the delay prop
+      viewport={{ once: true, amount: 0.5 }}  // animate when 50% visible, once
+      className="info-card-container"         // optional wrapper class
+    >
       <div className="info-card">
         <div className="icon-container">
           <img src={icon} alt="icon" className="icon-image" />
@@ -34,7 +40,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
           </a>
         </div>
       </div>
-    </MotionDiv>
+    </motion.div>
   );
 };
 
