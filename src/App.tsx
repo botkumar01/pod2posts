@@ -43,6 +43,7 @@ const App: React.FC = () => {
             "Automatic episode detection",
             "No manual uploading"
           ]}
+          number={1} /////////////////////////////////////////////////////////////////////////////////////////////////
         />
         <br />
         <br />
