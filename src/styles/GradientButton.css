@@ -3,18 +3,11 @@
 button.primary {
   border: none;
   color: white;
-<<<<<<< HEAD
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   background: linear-gradient(90deg, #6B26D8, #DD7F41);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-=======
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-  background: linear-gradient(90deg, #6B26D8, #DD7F41);
->>>>>>> 94d853accd9d8493ac87dcea0a5a8fdc6e7ac327
   transition: background 0.3s ease;
 }
 
@@ -22,18 +15,11 @@ button.secondary {
   width: 205px;
   border: none;
   color: white;
-<<<<<<< HEAD
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   background: linear-gradient(90deg, #DD7F41, #6B26D8);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-=======
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-  background: linear-gradient(90deg, #DD7F41, #6B26D8);
->>>>>>> 94d853accd9d8493ac87dcea0a5a8fdc6e7ac327
   transition: background 0.3s ease;
 }
 
@@ -50,7 +36,6 @@ button.secondary {
 button.white {
   border-radius: 50px;
 }
-<<<<<<< HEAD
 
 button.white {
   border: none;
@@ -61,23 +46,6 @@ button.white {
   background: white;
   transition: background 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
-=======
-button.white {
-  border: 1px solid rgb(224, 223, 223);
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-  background: white;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-
-  /* Add shadow only to the right and bottom sides */
-  box-shadow: 4px 4px 8px rgba(128, 128, 128, 0.4);
-}
-
-button.white:hover {
-  background: #f8f8f8; /* subtle hover background */
->>>>>>> 94d853accd9d8493ac87dcea0a5a8fdc6e7ac327
 }
 
 .gradient-text {
