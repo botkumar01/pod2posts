@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
 }}
 
         >
-          3x Faster
+          1x Faster
         </span>{" "}
           With Visual Content
       </h1>          <h3>
