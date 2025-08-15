@@ -244,8 +244,7 @@ const HomePage: React.FC = () => {
             <br />
         <br />
         <br />
-            <br />
-        <br />
+           
   
         <Footer />
       </div>
