@@ -1,14 +1,46 @@
 .podcast-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  border-radius: 20px;
-  padding: 1.5rem 1rem;
-  box-shadow: 0 4px 12px rgb(230, 22, 22);
+  border-radius: .25rem;
+  padding: 1.25rem 1rem;
+  box-shadow: -1px 0 3px .2px rgb(24, 24, 24, .2);
   font-family: 'Geist', sans-serif;
-  color: #bb3636;
   max-width: max-content;
   box-sizing: border-box;
+
+
+  &::before {
+    z-index: 2;
+    content: attr(data-number);
+    position: absolute;
+    bottom: 100%;
+    left: -10px;
+    right: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: rgb(123, 61, 184);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .75rem;
+    color: white;
+  }
+
+  &.top-left {
+    &::before {
+      bottom: 90% !important;
+    }
+  }
+
+  &.bottom-left {
+    &::before {
+      bottom: -5px !important;
+    }
+  }
+
 }
 
 .podcast-text-container {
@@ -21,10 +53,10 @@
   font-size: .8rem;
   height: 21px;
   width: 304px;
-  font-weight: 400;
-  margin-top: 0%;
+  font-weight: 500;
+  margin-top: 0;
   line-height: 120%;
-  color: #424141;
+  color: rgba(black, .5);
 }
 
 .podcast-list {
@@ -35,6 +67,7 @@
   list-style: none; /* remove bullets if using <ul> */
   padding: 0;
   margin: 0;
+  margin-top: .5rem;
 }
 
 .podcast-list-item {

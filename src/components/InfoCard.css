@@ -1,7 +1,6 @@
 .info-card {
   /* display: flex; */
-  flex-direction: row;
-  align-items: center;
+  /* flex-direction: row; */
   gap: 12px;
   padding: 1.5rem;
   /* border: 1px solid #9c9b9b;
@@ -9,7 +8,7 @@
   border-right: 0px; */
   border-radius: 20px;
   background: #fff;
-  max-width: 400px;
+  min-width: 400px;
 
   /* shadow effect */
   box-shadow: 0 4px 5px 2px rgba(102, 99, 99, .25);
@@ -34,6 +33,8 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  flex-grow: 1;
+  align-items: stretch;
 }
 
 .card-title {

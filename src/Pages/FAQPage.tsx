@@ -29,7 +29,7 @@ const faqData: FAQItem[] = [
 const FAQPage: React.FC = () => {
   return (
     <div>
-      <h1 style={{ margin: "0 0 2rem 0", fontSize: "48px", color: "white", textAlign: "center" }}>
+      <h1 style={{ margin: "0 0 2rem 0", fontSize: "48px", textAlign: "center" }}>
         Frequently Asked{" "}
         <span
           style={{

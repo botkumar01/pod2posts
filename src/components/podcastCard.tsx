@@ -4,13 +4,18 @@ import GradientText from "./GradientText";
 interface PodcastCardProps {
   title: string;
   description: string;
-  list: string[]; // array for multiple lines
-}
+  list: string[];
+  number: number;
+  position?: "bottom-left" | "top-left";
+};
 
-const PodcastCard: React.FC<PodcastCardProps> = ({ title, description, list }) => {
+const PodcastCard: React.FC<PodcastCardProps> = ({ title, description, list, number, position }) => {
   return (
-    <div className="podcast-card">
-      <GradientText text="Connect Your Podcast" />
+    <div
+      className={`podcast-card position ${position} n${number}`}
+      data-number={`${number}`}
+    >
+      <GradientText text={title} />
       <p className="podcast-description">{description}</p>
 
       {/* Multi-line list */}

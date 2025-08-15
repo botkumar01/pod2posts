@@ -65,7 +65,7 @@ const App: React.FC = () => {
 
         <FAQPage />
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
