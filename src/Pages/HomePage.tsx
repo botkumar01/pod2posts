@@ -15,6 +15,7 @@ import girlPod from "../assets/Girl.png";
 import convo from "../assets/convo.png";
 
 import AnimatedFloatingCards from "./AnimatedFloatingCards";
+import PricingPage from "./PricingPage";
 
 const heroSpanAnimation = {
   hidden: { opacity: 0, y: 10, filter: "blur(10px)" },
@@ -261,7 +262,7 @@ const HomePage: React.FC = () => {
 
           <AnimatedFloatingCards />
         </section>
-
+        <PricingPage />
         <br />
         <br />
         <br />
