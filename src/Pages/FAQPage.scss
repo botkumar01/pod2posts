@@ -1,0 +1,46 @@
+.faq-page {
+  text-align: center;
+  padding: 2rem;
+
+  .faq-title {
+    font-size: 48px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+
+    .faq-gradient {
+      font-weight: 700;
+      background: linear-gradient(90deg, #8A38F5, #dd7f41cf);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline;
+    }
+  }
+}
+
+/* Responsive: Tablet / small desktop */
+@media screen and (max-width: 700px) {
+  .faq-page {
+    .faq-title {
+      font-size: 36px;
+      margin-bottom: 1.5rem;
+
+      .faq-gradient {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+/* Responsive: Mobile / small screens */
+@media screen and (max-width: 400px) {
+  .faq-page {
+    .faq-title {
+      font-size: 28px;
+      margin-bottom: 1rem;
+
+      .faq-gradient {
+        font-size: 28px;
+      }
+    }
+  }
+}
