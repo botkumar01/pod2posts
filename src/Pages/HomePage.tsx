@@ -1,5 +1,5 @@
 import "./HomePage.scss";
-import { motion, type Transition } from "framer-motion";
+import { motion } from "framer-motion";
 
 import Nav from "../components/Nav/Nav";
 import Button from "../components/Button";
@@ -9,7 +9,7 @@ import FAQPage from "./FAQPage";
 import PodcastCard from "../components/podcastCard";
 import SuperchargeSection from "./SuperchargeSection/SuperchargeSection";
 import Footer from "./Footer";
-
+import MultiText from "../components/MultiText";
 import audioIcon from "../assets/audio.png";
 import girlPod from "../assets/Girl.png";
 import convo from "../assets/convo.png";
@@ -17,17 +17,20 @@ import convo from "../assets/convo.png";
 import AnimatedFloatingCards from "./AnimatedFloatingCards";
 import PricingPage from "./PricingPage";
 
-const heroSpanAnimation = {
-  hidden: { opacity: 0, y: 10, filter: "blur(10px)" },
-  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3, // delay between each child
+    },
+  },
 };
 
-const heroSpanTransition = {
-  type: "tween",
-  ease: "easeOut",
-  duration: 0.4
-}
-
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
 const HomePage: React.FC = () => {
   return (
     <>
@@ -42,88 +45,37 @@ const HomePage: React.FC = () => {
           ]}
         />
 
-        <section className="hero">
-          <span className="sr-only">
-            Grow Your Podcast Audience 3x Faster With Visual Content
-          </span>
-          <motion.h1
-            aria-hidden
-            style={{
-              margin: "0 0 2rem 0",
-              fontSize: "59px",
-              fontWeight: 500,
-              color: "Black",
-              textAlign: "center",
-            }}
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 1 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: .08,
-                },
-              },
-            }}
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            {"Grow Your Podcast Audience".split(" ").map((word, index) => (
-              <motion.span
-                key={index}
-                variants={heroSpanAnimation}
-                transition={heroSpanTransition as Transition}
-              >
-                {word}{" "}
-              </motion.span>
-            ))}
-            <motion.span
-              style={{
-                fontFamily: "Geist, sans-serif",
-                background: "linear-gradient(90deg, #8e2de2, #a1391689)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                fontWeight: 500,
-                display: "inline",
-              }}
-              variants={heroSpanAnimation}
-              transition={heroSpanTransition as Transition}
-            >
-              1x Faster
-            </motion.span>{" "}
-            {"With Visual Content".split(" ").map((word, index) => (
-              <motion.span
-                key={index}
-                variants={heroSpanAnimation}
-                transition={heroSpanTransition as Transition}
-              >
-                {word}{" "}
-              </motion.span>
-            ))}
-          </motion.h1>{" "}
-          <motion.h3
-            initial={{ opacity: 0, y: 5 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, staggerChildren: 0.5, delay: 1.5 }}
-          >
-            Turn your best podcast moments into social media posts that actually
-            get shared. No design skills needed. Just 2 minutes per episode.
-          </motion.h3>
-          <motion.div 
-            className="cta"
-            initial={{ opacity: 0, y: 5 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, staggerChildren: 0.5, delay: 1.5 }}
-          >
-            <Button variant="white" text="Watch Demo" />
-            <Button variant="primary" text="Get Started" />
-          </motion.div>
-        </section>
+
+
+<motion.section
+  className="hero"
+  variants={containerVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  <motion.h1 className="hero-title" >
+    Grow Your Podcast Audience <br />{" "}
+    <span className="hero-gradient">
+      <MultiText /> Faster
+    </span>{" "}
+    With Visual Content
+  </motion.h1>
+
+  <motion.h3 className="hero-subtitle" >
+    Turn your best podcast moments into social media posts that actually get shared.
+    No design skills needed. Just 2 minutes per episode.
+  </motion.h3>
+
+  <motion.div className="cta" >
+    <Button variant="white" text="Watch Demo" />
+    <Button variant="primary" text="Get Started" />
+  </motion.div>
+</motion.section>
+
 
         <section className="placeholderImage"></section>
-
-        <section className="about">
+<section className="about">
           <motion.div 
             className="aboutImage left"
             initial={{ opacity: 0, y: 30 }}
@@ -152,7 +104,6 @@ const HomePage: React.FC = () => {
             <Button variant="primary" text="Read about PodToPosts" />
           </motion.div>
         </section>
-
         <section className="infoCardPanel">
           <InfoCard
             icon={audioIcon}
