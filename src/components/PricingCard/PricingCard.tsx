@@ -1,11 +1,16 @@
 
 import "./PricingCard.scss";
 
+import Button from "../Button";
+
 import greyGlobe from "../../assets/price_imgs/grey_globe.png";
 import purpleRocket from "../../assets/price_imgs/purple_rocket.png";
 import orangeAI from "../../assets/price_imgs/orange_ai.png";
 
 import purpleMostPop from "../../assets/price_imgs/purple_most_pop.png";
+
+import greyTick from "../../assets/price_imgs/grey_tick.png";
+import purpleTick from "../../assets/price_imgs/purple_tick.png";
 
 type PricingCardProps = {
     title: "Starter" | "Professional" | "Agency",
@@ -16,24 +21,53 @@ type PricingCardProps = {
     points: string[]
 }
 
+function getListImage(title: PricingCardProps["title"]) {
+    if (title === "Starter") return greyTick
+    if (title === "Professional") return greyTick
+    if (title === "Agency") return purpleTick
+
+}
+
 const PricingCard: React.FC<PricingCardProps> = ({ title, description, originalPrice, discountedPrice, color, points }) => {
     return (
         <div className={`pricingCard ${color}`}>
             {
-                (title === "Professional") && <img src={purpleMostPop} alt="" />
+                (title === "Professional") && <img className="label" src={purpleMostPop} alt="" />
             }
             <h2>
                 <img src={color === "grey" ? greyGlobe : color === "purple" ? purpleRocket : orangeAI} />
                 {title}
             </h2>
-            <p>{description}</p>
-            <p>Original Price: {originalPrice}</p>
-            <p>Discounted Price: {discountedPrice}</p>
-            <ul>
-                {points.map((point, index) => (
-                    <li key={index}>{point}</li>
-                ))}
-            </ul>
+            <p className="desc">{description}</p>
+            <div className="price">
+                <span className="original">
+                    {originalPrice}
+                </span>
+                {" "}
+                <span className="discount">
+                    {discountedPrice}
+                </span>
+                {" "}
+                for life
+            </div>
+            <div className="tierInfo">
+                <ul>
+                    {points.map((point, index) => (
+                        <li key={index}>
+                            <img src={
+                                getListImage(title)
+                            } alt="" />
+                            {point}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <Button
+                variant="white"
+                text="Get Started"
+            />
+
         </div>
     )
 }

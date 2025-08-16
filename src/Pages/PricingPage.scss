@@ -1,0 +1,68 @@
+
+
+.infoPoint {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 15px;
+        height: 15px;
+        object-fit: contain;
+    }
+
+    span {
+        font-size: .8rem;
+    }
+}
+
+.pricing {
+
+    h1 {
+        max-width: max-content;
+        margin: 0 auto;
+        text-align: center;
+
+        span.gradient-text {
+            font-size: 3rem;
+        }
+    }
+
+    h3 {
+        font-size: 2rem;
+        max-width: max-content;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .info {
+        display: flex;
+        gap: .5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tiers {
+        width: min(1000px, 95%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 3rem auto 0 auto;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .pricing {
+
+        .info {
+            flex-direction: column;
+        }
+
+        .tiers {
+            flex-direction: column;
+        }
+    }
+    
+}
