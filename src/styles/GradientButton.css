@@ -46,7 +46,7 @@ button.white {
 button.purple {
   border: none;
   color: white;
-  background: linear-gradient(rgb(243, 155, 255), rgb(131, 25, 152), rgb(104, 9, 104));
+  background: linear-gradient(#3C009A, #8A38F5);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 
   
@@ -55,7 +55,7 @@ button.purple {
 button.orange {
   border: none;
   color: white;
-  background: linear-gradient(rgb(255, 199, 156), rgb(255, 72, 0));
+  background: linear-gradient(#FF0000, #DD7F41);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 
 }
