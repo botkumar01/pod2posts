@@ -22,7 +22,9 @@ import peopleIcon from "../assets/small_icons/i2.png";
 
 import commentIcon from "../assets/small_icons/i4.png";
 import calendarIcon from "../assets/small_icons/i5.png";
-
+import { Clock, TargetIcon } from "lucide-react";
+import clock from "../assets/clock.png";
+import circles from "../assets/circles.png";
 
 const HomePage: React.FC = () => {
   return (
@@ -75,7 +77,7 @@ const HomePage: React.FC = () => {
               actually get shared. No design skills needed. Just 2 minutes per
               episode.
             </h2>
-            <Button variant="primary" text="Read about PodToPosts" />
+            <Button variant="primary" text="More about PodToPosts" />
           </div>
         </section>
 
@@ -90,7 +92,7 @@ const HomePage: React.FC = () => {
           />
 
           <InfoCard
-            icon={audioIcon}
+            icon={clock}
             title="Competing with Millions"
             description="Your amazing content gets lost in the podcast noise."
             linkText="No Discovery"
@@ -99,7 +101,7 @@ const HomePage: React.FC = () => {
           />
 
           <InfoCard
-            icon={audioIcon}
+            icon={circles}
             title="Too Busy Creating to Promote"
             description="You focus on episodes but have no time for marketing"
             linkText="Show Growth"

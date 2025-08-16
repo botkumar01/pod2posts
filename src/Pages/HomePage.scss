@@ -31,6 +31,7 @@
             font-weight: 300;
             width: min(800px, 90%);
             text-align: center;
+            color: rgba(0, 0, 0, 0.7);
         }
         
         .cta {
@@ -68,17 +69,21 @@
 
             h2 {
                 margin: 0;
-                font-size: 3.5rem;
+                font-size: 3.9rem;
                 font-weight: 500;
             }
 
             span.title {
                 font-weight: 600;
                 opacity: .8;
+                background: linear-gradient(90deg, #6B26D8, #8A38F5); // gradient colors
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
 
             span.subtext {
                 font-weight: 400;
+                color: rgba(0, 0, 0, 0.6);
             }
         }
 
@@ -522,7 +527,7 @@
   .hero-gradient {
     font-size: 4rem;  // default ~59px
     // font-family: "Geist, sans-serif";
-    background: linear-gradient(90deg, #8e2de2, #a1391689);
+    background: linear-gradient(90deg, #8e2de2, #8d2de2b3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
@@ -553,7 +558,7 @@
     scale: 0.9;
   }
   .hero-subtitle {
-    font-size: 8rem;
+    font-size: 1rem;
   }
 }
 
