@@ -7,7 +7,6 @@ import peopleIcon from "../assets/small_icons/i2.png";
 import commentIcon from "../assets/small_icons/i4.png";
 import calendarIcon from "../assets/small_icons/i5.png";
 import "./AnimatedFloatingCards.scss";
-
 function useIntersectionRatio<T extends HTMLElement>() {
   const ref = useRef<T>(null);
   const [ratio, setRatio] = useState(0);
@@ -147,7 +146,7 @@ export default function AnimatedFloatingCards() {
               }}
               style={isMobile ? getStyleMobile(i) : getStyleDesktop(i)}
             >
-              <FeatureCard {...cards[i]} />
+              <div className="Fe"> <FeatureCard {...cards[i]} /></div>
             </div>
           ))}
         </div>
@@ -160,7 +159,7 @@ export default function AnimatedFloatingCards() {
               }}
               style={isMobile ? getStyleMobile(i) : getStyleDesktop(i)}
             >
-              <FeatureCard {...cards[i]} />
+              <div className="Fe"> <FeatureCard {...cards[i]} /></div>
             </div>
           ))}
         </div>
@@ -173,7 +172,7 @@ export default function AnimatedFloatingCards() {
               }}
               style={isMobile ? getStyleMobile(i) : getStyleDesktop(i)}
             >
-              <FeatureCard {...cards[i]} />
+              <div className="Fe"> <FeatureCard {...cards[i]} /></div>
             </div>
           ))}
         </div>
