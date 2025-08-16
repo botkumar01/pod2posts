@@ -1,5 +1,5 @@
 .faq-container {
-  max-width: 600px;
+  max-width: 650px;
   margin: auto;
   margin-bottom: 4rem;
 }
@@ -34,12 +34,12 @@
   display: flex;                /* use flex */
   justify-content: center;      /* horizontal center */
   align-items: center;          /* vertical center */
-  width: 34.4px;
-  height: 34.4px;
+  width: 30.4px;
+  height: 30.4px;
   border-radius: 50%;
   color: white;
   transition: transform 0.3s ease;
-  background: linear-gradient(135deg, #e8e6ea, #8e2de2);
+  background: linear-gradient(135deg, #cdc8d2, #8d2de2);
 }
 .faq-arrow.open {
   transform: rotate(90deg);

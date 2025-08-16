@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./FAQ.scss";
+import arrw from "../../assets/arrw.png";
 
 // ✅ export the interface so other files can import it
 export interface FAQItem {
@@ -25,8 +26,14 @@ const FAQ: React.FC<FAQProps> = ({ items }) => {
           <button className="faq-question" onClick={() => toggleFAQ(index)}>
             <span>{item.question}</span>
             <span className={`faq-arrow ${openIndex === index ? "open" : ""}`}>
-              ▶
-            </span>
+  <img 
+    src={arrw}
+    alt="arrow" 
+    className="arrow-icon"
+        style={{ width: "18px", height: "18px" }} 
+
+  />
+</span>
           </button>
 
           <div

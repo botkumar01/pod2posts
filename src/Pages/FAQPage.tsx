@@ -33,7 +33,7 @@ const FAQPage: React.FC = () => {
         Frequently Asked{" "}
         <span
           style={{
-            background: "linear-gradient(90deg, #4168ddff, #8e2de2)",
+            background: "linear-gradient(90deg, #8A38F5, #dd7f41cf)",
             WebkitBackgroundClip: "text", // must be camelCase
             WebkitTextFillColor: "transparent", // must be camelCase
             fontWeight: 700,
