@@ -33,9 +33,6 @@ button.secondary {
 
 button.white {
   border-radius: 50px;
-}
-
-button.white {
   border: none;
   color: rgb(0, 0, 0);
   font-size: 1rem;
@@ -44,6 +41,23 @@ button.white {
   background: white;
   transition: background 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+button.purple {
+  border: none;
+  color: white;
+  background: linear-gradient(rgb(243, 155, 255), rgb(131, 25, 152), rgb(104, 9, 104));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+
+  
+}
+
+button.orange {
+  border: none;
+  color: white;
+  background: linear-gradient(rgb(255, 199, 156), rgb(255, 72, 0));
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+
 }
 
 .gradient-text {

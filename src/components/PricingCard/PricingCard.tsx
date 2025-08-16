@@ -11,21 +11,27 @@ import purpleMostPop from "../../assets/price_imgs/purple_most_pop.png";
 
 import greyTick from "../../assets/price_imgs/grey_tick.png";
 import purpleTick from "../../assets/price_imgs/purple_tick.png";
+import orangeTick from "../../assets/price_imgs/orange_tick.png";
 
 type PricingCardProps = {
     title: "Starter" | "Professional" | "Agency",
     description: string,
     originalPrice: string,
     discountedPrice: string,
-    color: "grey" | "purple" | "orange",
+    color: "white" | "purple" | "orange",
     points: string[]
 }
 
 function getListImage(title: PricingCardProps["title"]) {
     if (title === "Starter") return greyTick
-    if (title === "Professional") return greyTick
-    if (title === "Agency") return purpleTick
+    if (title === "Professional") return purpleTick
+    if (title === "Agency") return orangeTick
+}
 
+function getTierImage(title: PricingCardProps["title"]) {
+    if (title === "Starter") return greyGlobe
+    if (title === "Professional") return purpleRocket
+    if (title === "Agency") return orangeAI
 }
 
 const PricingCard: React.FC<PricingCardProps> = ({ title, description, originalPrice, discountedPrice, color, points }) => {
@@ -35,7 +41,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ title, description, originalP
                 (title === "Professional") && <img className="label" src={purpleMostPop} alt="" />
             }
             <h2>
-                <img src={color === "grey" ? greyGlobe : color === "purple" ? purpleRocket : orangeAI} />
+                <img src={getTierImage(title)} />
                 {title}
             </h2>
             <p className="desc">{description}</p>
@@ -64,7 +70,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ title, description, originalP
             </div>
 
             <Button
-                variant="white"
+                variant={color}
                 text="Get Started"
             />
 
