@@ -21,9 +21,9 @@ const InfoCard: React.FC<InfoCardProps> = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}          // start below
+      initial={{ opacity: 0, y: 20 }}          // start below
       whileInView={{ opacity: 1, y: 0 }}      // animate to normal position
-      transition={{ delay, duration: 0.8, ease: "easeOut" }} // use the delay prop
+      transition={{ delay, duration: 0.5, ease: "easeOut" }} // use the delay prop
       viewport={{ once: true, amount: 0.5 }}  // animate when 50% visible, once
       className="info-card-container"         // optional wrapper class
     >

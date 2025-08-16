@@ -10,8 +10,6 @@
     max-width: 90vw;
     overflow: hidden;
 
-    animation: fadeIn .5s ease;
-
     .hero {
         display: flex;
         flex-direction: column;
@@ -25,6 +23,11 @@
             text-align: center;
             width: min(800px, 90%);
             margin-bottom: 0;
+            white-space: pre-wrap;
+
+            span {
+                display: inline-block;
+            }
         }
 
         h3 {
