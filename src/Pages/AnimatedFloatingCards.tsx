@@ -1,4 +1,4 @@
-// import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
+import { useRef, useLayoutEffect, useState, useEffect } from "react";
 import FeatureCard from "../components/FeatureCard";
 import logo from "../assets/BigLogo.png";
 import audioIcon from "../assets/audio.png";
