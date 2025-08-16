@@ -3,7 +3,10 @@ nav.siteNav {
     background-color: #fff;
     display: flex;
     align-items: center;
-    padding: 2rem 1rem;
+
+    padding:1rem 7rem;
+    padding-left: 4rem;
+    padding-top: 2rem;
     justify-content: space-between;
 
     position: fixed;
@@ -113,7 +116,7 @@ nav.siteNav {
     transform: translateY(0);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
     nav.siteNav {
 

@@ -31,6 +31,11 @@ const containerVariants = {
 //   hidden: { opacity: 0, y: 50 },
 //   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 // };
+
+const fadeUpVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 const HomePage: React.FC = () => {
   return (
     <>
@@ -45,16 +50,14 @@ const HomePage: React.FC = () => {
           ]}
         />
 
-
-
 <motion.section
   className="hero"
-  variants={containerVariants}
+  variants={containerVariants}   // parent controls stagger
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true }}
 >
-  <motion.h1 className="hero-title" >
+  <motion.h1 className="hero-title" variants={fadeUpVariant}>
     Grow Your Podcast Audience <br />{" "}
     <span className="hero-gradient">
       <MultiText /> Faster
@@ -62,19 +65,46 @@ const HomePage: React.FC = () => {
     With Visual Content
   </motion.h1>
 
-  <motion.h3 className="hero-subtitle" >
+  <motion.h3 className="hero-subtitle" variants={fadeUpVariant}>
     Turn your best podcast moments into social media posts that actually get shared.
     No design skills needed. Just 2 minutes per episode.
   </motion.h3>
 
-  <motion.div className="cta" >
+  <motion.div className="cta" variants={fadeUpVariant}>
     <Button variant="white" text="Watch Demo" />
     <Button variant="primary" text="Get Started" />
   </motion.div>
 </motion.section>
 
+<motion.section 
+  className="placeholderImage"
+  variants={containerVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  <motion.div variants={fadeUpVariant}> {/* content inside */}</motion.div>
+</motion.section>
 
-        <section className="placeholderImage"></section>
+{/* <motion.section 
+  className="about"
+  variants={containerVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+> */}
+  {/* <motion.div variants={fadeUpVariant}> about content</motion.div> */}
+{/* </motion.section> */}
+
+{/* <motion.section 
+  className="about"
+  variants={fadeUpVariant}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+> */}
+  {/* About content */}
+{/* </motion.section> */}
 <section className="about">
           <motion.div 
             className="aboutImage left"
