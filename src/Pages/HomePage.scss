@@ -87,11 +87,14 @@
 
         .aboutText {
             flex: 2.7;
+            // font-size: 1rem;
 
-              h2 {
+            // min-width: 600px;
+
+            h2 {
                 font-size: 2rem !important;
                 margin-bottom: 1rem;
-                line-height: 3rem !important;
+                line-height: 2.5rem !important;
                 font-weight: 600 !important;
             }
         }
@@ -318,7 +321,7 @@
                 h2 {
                     text-align: center;
                     font-size: 1.5rem !important;
-                    line-height: 2rem;
+                    line-height: 2rem !important;
                 }
             }
             
@@ -481,7 +484,7 @@
 
 @media (max-width: 900px) {
     h1 {
-      font-size: 2.5rem; // 40px
+      font-size: .5rem; // 40px
     }
     h3 {
       font-size: 1rem; // 16px
@@ -621,7 +624,7 @@
     .floaters {
       .row {
         .Fcard {
-          min-width: 300px;  // smaller for tablets/large phones
+          // min-width: 300px;  // smaller for tablets/large phones
         }
       }
     }
@@ -637,8 +640,8 @@
         .row {
           .Fcard {
             // margin: 0%;
-            transform: scale(0.79);   // instead of scale: .1
-            transform-origin: center; // makes it shrink from center
+            // transform: scale(0.79);   // instead of scale: .1
+            // transform-origin: center; // makes it shrink from center
           }
         }
       }
@@ -652,7 +655,9 @@
       .floaters {
         .row {
           .Fcard {
-            transform: scale(0.8);   // instead of scale: .1
+            // transform: scale(0.8);
+               // instead of scale: .1
+            // width: 20px;
             transform-origin: center; // makes it shrink from center
           }
         }
@@ -669,7 +674,7 @@
       .floaters {
         .row {
           .Fcard {
-            transform: scale(0.6);   // instead of scale: .1
+            // transform: scale(0.6);   // instead of scale: .1
             transform-origin: center; // makes it shrink from center
           }
         }
@@ -808,7 +813,6 @@
     filter: blur(0);
   }
 }
-
 /* Tablet / small desktop <= 700px */
 @media screen and (max-width: 750px) {
   .homePage {
