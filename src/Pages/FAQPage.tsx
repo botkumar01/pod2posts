@@ -1,7 +1,7 @@
 import React from "react";
 import FAQ from "../components/FAQ/FAQ";
 import type { FAQItem } from "../components/FAQ/FAQ";
-import "../components/FAQ/FAQ.scss";
+import "./FAQPage.scss"; // Use SCSS for styling and media queries
 
 const faqData: FAQItem[] = [
   {
@@ -28,20 +28,10 @@ const faqData: FAQItem[] = [
 
 const FAQPage: React.FC = () => {
   return (
-    <div>
-      <h1 style={{ margin: "0 0 2rem 0", fontSize: "48px", textAlign: "center" }}>
+    <div className="faq-page">
+      <h1 className="faq-title">
         Frequently Asked{" "}
-        <span
-          style={{
-            background: "linear-gradient(90deg, #8A38F5, #dd7f41cf)",
-            WebkitBackgroundClip: "text", // must be camelCase
-            WebkitTextFillColor: "transparent", // must be camelCase
-            fontWeight: 700,
-            display: "inline",
-          }}
-        >
-          Questions
-        </span>
+        <span className="faq-gradient">Questions</span>
       </h1>
 
       <FAQ items={faqData} />
