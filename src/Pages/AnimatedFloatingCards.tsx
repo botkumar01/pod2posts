@@ -1,0 +1,185 @@
+import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
+import FeatureCard from "../components/FeatureCard";
+import logo from "../assets/BigLogo.png";
+import audioIcon from "../assets/audio.png";
+import growIcon from "../assets/small_icons/i1.png";
+import peopleIcon from "../assets/small_icons/i2.png";
+import commentIcon from "../assets/small_icons/i4.png";
+import calendarIcon from "../assets/small_icons/i5.png";
+
+function useIntersectionRatio<T extends HTMLElement>() {
+  const ref = useRef<T>(null);
+  const [ratio, setRatio] = useState(0);
+
+  useEffect(() => {
+    if (!ref.current) return;
+    const observer = new window.IntersectionObserver(
+      ([entry]) => setRatio(entry.intersectionRatio),
+      { threshold: Array.from({ length: 101 }, (_, i) => i / 100) }
+    );
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return [ref, ratio] as const;
+}
+
+const cards = [
+  {
+    title: "Smart Content Extraction",
+    description: "AI finds the most shareable moments from your episodes",
+    iconSrc: audioIcon,
+    row: 0,
+    col: 0,
+  },
+  {
+    title: "Professional Templates",
+    description: "Designs that make you look like you hired a team",
+    iconSrc: audioIcon,
+    row: 0,
+    col: 1,
+  },
+  {
+    title: "Growth-Optimized Formats",
+    description: "LinkedIn carousels, Instagram multi-posts, X graphics",
+    iconSrc: growIcon,
+    row: 1,
+    col: 0,
+  },
+  {
+    title: "Engagement-Driving Captions",
+    description: "AI writes posts that spark conversations, drive discovery.",
+    iconSrc: commentIcon,
+    row: 1,
+    col: 1,
+  },
+  {
+    title: "Promotion Calendar",
+    description: "Plan your content weeks ahead for consistent growth",
+    iconSrc: calendarIcon,
+    row: 2,
+    col: 0,
+  },
+  {
+    title: "New Audience Discovery",
+    description: "Reach people who would never search for podcasts",
+    iconSrc: peopleIcon,
+    row: 2,
+    col: 1,
+  },
+];
+
+export default function AnimatedFloatingCards() {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 800);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+  const [containerRef, ratio] = useIntersectionRatio<HTMLDivElement>();
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [transforms, setTransforms] = useState<{ x: number; y: number }[]>([]);
+
+  useLayoutEffect(() => {
+    if (!containerRef.current) return;
+    const parentRect = containerRef.current.getBoundingClientRect();
+    const newTransforms = cardRefs.current.map((card) => {
+      if (!card) return { x: 0, y: 0 };
+      const cardRect = card.getBoundingClientRect();
+      // center of parent
+      const parentCenterX = parentRect.left + parentRect.width / 2;
+      const parentCenterY = parentRect.top + parentRect.height / 2;
+      // center of card
+      const cardCenterX = cardRect.left + cardRect.width / 2;
+      const cardCenterY = cardRect.top + cardRect.height / 2;
+      // offset needed to move card to center of parent
+      return {
+        x: parentCenterX - cardCenterX,
+        y: parentCenterY - cardCenterY,
+      };
+    });
+    setTransforms(newTransforms);
+  }, [containerRef.current]);
+
+  // interpolate distance between center and original position
+  // desktop animation
+  const getStyleDesktop = (i: number) => {
+    const t = transforms[i] || { x: 0, y: 0 };
+    return {
+      opacity: ratio,
+      transform: `translate(${t.x * (1 - ratio)}px, ${
+        t.y * (1 - ratio)
+      }px) scale(${0.5 + 0.5 * ratio})`,
+      transition:
+        "transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0.0, 0.2, 1)",
+      willChange: "transform, opacity",
+    };
+  };
+
+  // mobile animation: fade in from bottom, staggered
+  const getStyleMobile = (i: number) => {
+    const baseDelay = 0.1;
+    const delay = baseDelay * i;
+    return {
+      opacity: ratio,
+      transform: `translateY(${40 * (1 - ratio)}px)`,
+      transition: `transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1) ${delay}s, opacity 0.4s cubic-bezier(0.4, 0.0, 0.2, 1) ${delay}s`,
+      willChange: "transform, opacity",
+    };
+  };
+
+  return (
+    <div
+      className="cardsContainer"
+      ref={containerRef}
+      style={{ position: "relative" }}
+    >
+      <div className="floaters">
+        <div className="row row1 small">
+          {[0, 1].map((i) => (
+            <div
+              key={cards[i].title}
+              ref={(el) => {
+                cardRefs.current[i] = el;
+              }}
+              style={isMobile ? getStyleMobile(i) : getStyleDesktop(i)}
+            >
+              <FeatureCard {...cards[i]} />
+            </div>
+          ))}
+        </div>
+        <div className="row row2 long">
+          {[2, 3].map((i, idx) => (
+            <div
+              key={cards[i].title}
+              ref={(el) => {
+                cardRefs.current[i] = el;
+              }}
+              style={isMobile ? getStyleMobile(i) : getStyleDesktop(i)}
+            >
+              <FeatureCard {...cards[i]} />
+            </div>
+          ))}
+        </div>
+        <div className="row row3 small">
+          {[4, 5].map((i, _) => (
+            <div
+              key={cards[i].title}
+              ref={(el) => {
+                cardRefs.current[i] = el;
+              }}
+              style={isMobile ? getStyleMobile(i) : getStyleDesktop(i)}
+            >
+              <FeatureCard {...cards[i]} />
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="overlay">
+        <img src={logo} alt="" />
+      </div>
+    </div>
+  );
+}

@@ -5,24 +5,16 @@ import Nav from "../components/Nav/Nav";
 import Button from "../components/Button";
 import InfoCard from "../components/InfoCard";
 import GradientText from "../components/GradientText";
-// import Footer from "./Footer";
 import FAQPage from "./FAQPage";
 import PodcastCard from "../components/podcastCard";
-import FeatureCard from "../components/FeatureCard";
 import SuperchargeSection from "./SuperchargeSection/SuperchargeSection";
 import Footer from "./Footer";
 
 import audioIcon from "../assets/audio.png";
 import girlPod from "../assets/Girl.png";
 import convo from "../assets/convo.png";
-import logo from "../assets/BigLogo.png";
 
-import growIcon from "../assets/small_icons/i1.png";
-import peopleIcon from "../assets/small_icons/i2.png";
-
-import commentIcon from "../assets/small_icons/i4.png";
-import calendarIcon from "../assets/small_icons/i5.png";
-
+import AnimatedFloatingCards from "./AnimatedFloatingCards";
 
 const heroSpanAnimation = {
   hidden: { opacity: 0, y: 10, filter: "blur(10px)" },
@@ -267,51 +259,7 @@ const HomePage: React.FC = () => {
             <GradientText text="Explore the Posts by Podtoposts" />
           </div>
 
-          <div className="cardsContainer">
-            <div className="floaters">
-              <div className="row row1 small">
-                <FeatureCard
-                  title="Smart Content Extraction"
-                  description="AI finds the most shareable moments from your episodes"
-                  iconSrc={audioIcon}
-                />
-                <FeatureCard
-                  title="Professional Templates"
-                  description="Designs that make you look like you hired a team"
-                  iconSrc={audioIcon}
-                />
-              </div>
-
-              <div className="row row2 long">
-                <FeatureCard
-                  title="Growth-Optimized Formats"
-                  description="LinkedIn carousels, Instagram multi-posts, X graphics"
-                  iconSrc={growIcon}
-                />
-                <FeatureCard
-                  title="Engagement-Driving Captions"
-                  description="AI writes posts that spark conversations, drive discovery."
-                  iconSrc={commentIcon}
-                />
-              </div>
-
-              <div className="row row3 small">
-                <FeatureCard
-                  title="Promotion Calendar"
-                  description="Plan your content weeks ahead for consistent growth"
-                  iconSrc={calendarIcon}
-                />
-                <FeatureCard
-                  title="New Audience Discovery"
-                  description="Reach people who would never search for podcasts"
-                  iconSrc={peopleIcon}
-                />
-              </div>
-            </div>
-            <div className="overlay">
-              <img src={logo} alt="" />
-            </div>
-          </div>
+          <AnimatedFloatingCards />
         </section>
 
         <br />
