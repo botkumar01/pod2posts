@@ -9,7 +9,6 @@ button.primary {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease;
 }
-
 button.secondary {
   width: 205px;
   border: none;
