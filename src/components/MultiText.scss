@@ -1,0 +1,15 @@
+.multi-text-container {
+  height: 3.8rem;            // adjust height as needed
+//   overflow: hidden;
+//   position: relative;
+  display: inline-block;
+}
+
+.multi-text {
+//   position: absolute;
+  font-size: 3.5rem;          // adjust font size
+  font-weight: bold;
+  background: #8e2de2;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
