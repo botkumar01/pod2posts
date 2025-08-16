@@ -1,6 +1,8 @@
 
 import "./PricingCard.scss";
 
+import type { JSX } from "react";
+
 import Button from "../Button";
 
 import greyGlobe from "../../assets/price_imgs/grey_globe.png";
@@ -13,13 +15,15 @@ import greyTick from "../../assets/price_imgs/grey_tick.png";
 import purpleTick from "../../assets/price_imgs/purple_tick.png";
 import orangeTick from "../../assets/price_imgs/orange_tick.png";
 
+type pointText = string | JSX.Element;
+
 type PricingCardProps = {
     title: "Starter" | "Professional" | "Agency",
-    description: string,
+    description: string | JSX.Element,
     originalPrice: string,
     discountedPrice: string,
     color: "white" | "purple" | "orange",
-    points: string[]
+    points: pointText[]
 }
 
 function getListImage(title: PricingCardProps["title"]) {
@@ -60,7 +64,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ title, description, originalP
                 <ul>
                     {points.map((point, index) => (
                         <li key={index}>
-                            <img src={
+                            <img className="tickImage" src={
                                 getListImage(title)
                             } alt="" />
                             {point}

@@ -1,9 +1,9 @@
 
 
+
 .pricingCard {
     flex: 1;
     flex-grow: 1;
-    min-width: max-content;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -76,11 +76,16 @@
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                gap: .5rem;
+                gap: .25rem;
                 margin-bottom: .5rem;
-                font-size: .9rem;
+                font-size: .8rem;
 
                 img {
+                    display: inline;
+                    height: 20px;
+                }
+
+                img.tickImage {
                     height: 15px;
                     width: 15px;
                     object-fit: contain;
@@ -94,6 +99,28 @@
         margin-top: auto;
         max-width: none;
         width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    .pricingCard {
+
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        p.desc {
+            font-style: .7rem;
+        }
+
+        .tierInfo {
+            ul li {
+                font-size: .75rem;
+            }
+        }
     }
 
 }

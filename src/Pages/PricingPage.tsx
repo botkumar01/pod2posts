@@ -9,6 +9,9 @@ import gradientTick from "../assets/price_imgs/gradient_tick.png";
 import type { JSX } from "react";
 import Button from "../components/Button";
 
+import purpleComingSoon from "../assets/price_imgs/purple_coming_soon.png";
+import orangeComingSoon from "../assets/price_imgs/orange_coming_soon.png";
+
 const InfoPoint: React.FC<{ text: string | JSX.Element }> = ({ text }) => {
   return (
     <span className="infoPoint">
@@ -83,8 +86,8 @@ const PricingPage: React.FC = () => {
               "Saved Work Dashboard",
               "No Watermarks",
               "Priority Support",
-              "Priority Access to new features",
-              "Analytics Dashboard"
+              <>Priority Access to new features <img src={purpleComingSoon} alt="" /></>,
+              <>Analytics Dashboard <img src={purpleComingSoon} alt="" /></>
             ]}
           />
           <PricingCard
@@ -99,9 +102,9 @@ const PricingPage: React.FC = () => {
               "White label Option",
               "PNG/JPG Support",
               "Standard Quality Support",
-              "Team Access",
-              "Advanced Analytics and Reporting",
-              "API access for custom integrations"
+              <>Team Access <img src={orangeComingSoon} alt="" /></>,
+              <>Advanced Analytics and Reporting <img src={orangeComingSoon} alt="" /></>,
+              <>API access for custom integrations <img src={orangeComingSoon} alt="" /></>
             ]}
           />
           {/* <PricingCard />
