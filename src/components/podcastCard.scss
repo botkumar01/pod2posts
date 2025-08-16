@@ -4,8 +4,10 @@
   flex-direction: column;
   background: #ffffff;
   border-radius: .25rem;
+  border-left: #00000022 1px solid;
+  
   padding: 1.25rem 1rem;
-  box-shadow: -1px 0 3px .2px rgb(24, 24, 24, .2);
+  // box-shadow: -1px 0 3px .2px rgb(24, 24, 24, .2);
   font-family: 'Geist', sans-serif;
   max-width: max-content;
   box-sizing: border-box;

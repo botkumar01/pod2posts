@@ -19,7 +19,7 @@ const PodcastCard: React.FC<PodcastCardProps> = ({ title, description, list, num
       data-number={`${number}`}
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{
         type: "tween",
         ease: "easeOut",

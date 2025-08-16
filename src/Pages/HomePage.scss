@@ -892,8 +892,8 @@
 /* Small mobile <= 550px */
 @media screen and (max-width: 640px) {
   .homePage {
-    // width: 100vw;
-    max-width: 100vw;
+    width: 100vw;
+    // max-width: 100vw;
 
     .hero {
       // padding: 2% 0;
@@ -921,7 +921,8 @@
     }
 
     .placeholderImage {
-      width: 100%;
+      width: 95%;
+      margin-top: 20px;
       border-radius: 25px;
       height: 300px;
     }
@@ -991,8 +992,8 @@
     }
 
     .placeholderImage {
-      width: 100%;
-      border-radius: 0;
+      // width: 100%;
+      // border-radius: 0;
       height: 250px;
     }
 
