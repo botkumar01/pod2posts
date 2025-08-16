@@ -101,7 +101,7 @@ const HomePage: React.FC = () => {
               actually get shared. No design skills needed. Just 2 minutes per
               episode.
             </h2>
-            <Button variant="primary" text="Read about PodToPosts" />
+            <Button variant="primary" text="More about PodToPosts" />
           </motion.div>
         </section>
         <section className="infoCardPanel">
