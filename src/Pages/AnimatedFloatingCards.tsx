@@ -6,6 +6,7 @@ import growIcon from "../assets/small_icons/i1.png";
 import peopleIcon from "../assets/small_icons/i2.png";
 import commentIcon from "../assets/small_icons/i4.png";
 import calendarIcon from "../assets/small_icons/i5.png";
+import "./AnimatedFloatingCards.scss";
 
 function useIntersectionRatio<T extends HTMLElement>() {
   const ref = useRef<T>(null);
