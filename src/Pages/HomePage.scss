@@ -678,3 +678,198 @@
   }
 }
 
+.homePage {
+  margin: 0 auto;
+  margin-top: 6rem;
+  background-color: #fdfdfd;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 90vw;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease;
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+
+    .hero-title {
+      font-weight: 500;
+      font-size: 3rem;
+      text-align: center;
+      width: min(800px, 90%);
+      margin-bottom: 0;
+
+      .hero-gradient {
+        font-size: 3rem;
+        background: linear-gradient(90deg, #8e2de2, #8d2de2b3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+      }
+    }
+
+    .hero-subtitle {
+      font-weight: 300;
+      width: min(800px, 90%);
+      text-align: center;
+      color: rgba(0, 0, 0, 0.7);
+      margin-bottom: 3rem;
+    }
+
+    .cta {
+      max-width: max-content;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .placeholderImage {
+    border-radius: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  .about {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    margin: 4rem 2rem;
+
+    .aboutImage {
+      flex-grow: 1;
+      flex: 1;
+      padding-top: 2rem;
+      box-sizing: border-box;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &.left {
+        /* any specific left styles if needed */
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 3.9rem;
+        font-weight: 500;
+      }
+
+      span.title {
+        font-weight: 600;
+        opacity: 0.8;
+        background: linear-gradient(90deg, #6B26D8, #8A38F5);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      span.subtext {
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      span.boldText {
+        font-weight: 700;
+      }
+    }
+
+    .aboutText {
+      flex: 2.7;
+
+      &.right {
+        /* any specific right styles if needed */
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        line-height: 3rem;
+        font-weight: 600 !important;
+      }
+    }
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Responsive Example */
+@media screen and (max-width: 1000px) {
+  .homePage {
+    width: 100vw;
+    max-width: 100vw;
+
+    .hero {
+      flex-direction: column;
+      padding: 2rem 0;
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .cta {
+        flex-direction: column;
+        gap: 1rem;
+
+        button {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .placeholderImage {
+      width: 100%;
+      border-radius: 0;
+      height: 300px;
+    }
+
+    .about {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .aboutImage.left {
+        .boldText,
+        .subtext {
+          display: none;
+        }
+      }
+
+      .aboutText.right {
+        max-width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        h2 {
+          text-align: center;
+          font-size: 1.75rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+}
