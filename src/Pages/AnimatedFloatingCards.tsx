@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
+// import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
 import FeatureCard from "../components/FeatureCard";
 import logo from "../assets/BigLogo.png";
 import audioIcon from "../assets/audio.png";
@@ -151,7 +151,7 @@ export default function AnimatedFloatingCards() {
           ))}
         </div>
         <div className="row row2 long">
-          {[2, 3].map((i, idx) => (
+          {[2, 3].map((i) => (
             <div
               key={cards[i].title}
               ref={(el) => {
