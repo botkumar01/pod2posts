@@ -9,21 +9,28 @@ import i6 from "../assets/small_icons/i6.png";
 import commentIcon from "../assets/small_icons/i4.png";
 import calendarIcon from "../assets/small_icons/i5.png";
 import "./AnimatedFloatingCards.scss";
-function useIntersectionRatio<T extends HTMLElement>() {
+
+// ✅ Hook that triggers only once when in view
+function useInViewOnce<T extends HTMLElement>() {
   const ref = useRef<T>(null);
-  const [ratio, setRatio] = useState(0);
+  const [inView, setInView] = useState(false);
 
   useEffect(() => {
     if (!ref.current) return;
-    const observer = new window.IntersectionObserver(
-      ([entry]) => setRatio(entry.intersectionRatio),
-      { threshold: Array.from({ length: 101 }, (_, i) => i / 100) }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect(); // stop observing after first trigger
+        }
+      },
+      { threshold: 0.2 } // triggers when 20% visible
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
 
-  return [ref, ratio] as const;
+  return [ref, inView] as const;
 }
 
 const cards = [
@@ -34,7 +41,7 @@ const cards = [
     row: 0,
     col: 0,
   },
-   {
+  {
     title: "Engagement-Driving Captions",
     description: "AI writes posts that spark conversations, drive discovery.",
     iconSrc: commentIcon,
@@ -48,7 +55,7 @@ const cards = [
     row: 0,
     col: 1,
   },
-   {
+  {
     title: "Promotion Calendar",
     description: "Plan your content weeks ahead for consistent growth",
     iconSrc: calendarIcon,
@@ -62,8 +69,6 @@ const cards = [
     row: 1,
     col: 0,
   },
- 
- 
   {
     title: "New Audience Discovery",
     description: "Reach people who would never search for podcasts",
@@ -75,14 +80,15 @@ const cards = [
 
 export default function AnimatedFloatingCards() {
   const [isMobile, setIsMobile] = useState(false);
-  
+
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 800);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
-  const [containerRef, ratio] = useIntersectionRatio<HTMLDivElement>();
+
+  const [containerRef, inView] = useInViewOnce<HTMLDivElement>();
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [transforms, setTransforms] = useState<{ x: number; y: number }[]>([]);
 
@@ -107,29 +113,28 @@ export default function AnimatedFloatingCards() {
     setTransforms(newTransforms);
   }, [containerRef.current]);
 
-  // interpolate distance between center and original position
-  // desktop animation
+  // Desktop animation (cards fly in from center)
   const getStyleDesktop = (i: number) => {
     const t = transforms[i] || { x: 0, y: 0 };
     return {
-      opacity: ratio,
-      transform: `translate(${t.x * (1 - ratio)}px, ${
-        t.y * (1 - ratio)
-      }px) scale(${0.5 + 0.5 * ratio})`,
+      opacity: inView ? 1 : 0,
+      transform: inView
+        ? "translate(0, 0) scale(1)"
+        : `translate(${t.x}px, ${t.y}px) scale(0.5)`,
       transition:
-        "transform 0.25s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.25s cubic-bezier(0.4, 0.0, 0.2, 1)",
+        "transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0.0, 0.2, 1)",
       willChange: "transform, opacity",
     };
   };
 
-  // mobile animation: fade in from bottom, staggered
+  // Mobile animation (fade in from bottom, staggered)
   const getStyleMobile = (i: number) => {
     const baseDelay = 0.1;
     const delay = baseDelay * i;
     return {
-      opacity: ratio,
-      transform: `translateY(${40 * (1 - ratio)}px)`,
-      transition: `transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1) ${delay}s, opacity 0.4s cubic-bezier(0.4, 0.0, 0.2, 1) ${delay}s`,
+      opacity: inView ? 1 : 0,
+      transform: inView ? "translateY(0)" : "translateY(40px)",
+      transition: `transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) ${delay}s, opacity 0.6s cubic-bezier(0.4, 0.0, 0.2, 1) ${delay}s`,
       willChange: "transform, opacity",
     };
   };
@@ -150,7 +155,9 @@ export default function AnimatedFloatingCards() {
               }}
               style={isMobile ? getStyleMobile(i) : getStyleDesktop(i)}
             >
-              <div className="Fe"> <FeatureCard {...cards[i]} /></div>
+              <div className="Fe">
+                <FeatureCard {...cards[i]} />
+              </div>
             </div>
           ))}
         </div>
@@ -163,12 +170,14 @@ export default function AnimatedFloatingCards() {
               }}
               style={isMobile ? getStyleMobile(i) : getStyleDesktop(i)}
             >
-              <div className="Fe"> <FeatureCard {...cards[i]} /></div>
+              <div className="Fe">
+                <FeatureCard {...cards[i]} />
+              </div>
             </div>
           ))}
         </div>
         <div className="row row3 small">
-          {[4, 5].map((i, _) => (
+          {[4, 5].map((i) => (
             <div
               key={cards[i].title}
               ref={(el) => {
@@ -176,13 +185,15 @@ export default function AnimatedFloatingCards() {
               }}
               style={isMobile ? getStyleMobile(i) : getStyleDesktop(i)}
             >
-              <div className="Fe"> <FeatureCard {...cards[i]} /></div>
+              <div className="Fe">
+                <FeatureCard {...cards[i]} />
+              </div>
             </div>
           ))}
         </div>
       </div>
       <div className="overlay">
-        <img src={logo} alt="" />
+        <img src={logo} alt="logo" />
       </div>
     </div>
   );
