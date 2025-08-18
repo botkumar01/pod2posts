@@ -71,7 +71,6 @@ nav.siteNav {
 }
 
 .mobileMenu {
-    margin-top: 6rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -136,7 +135,7 @@ nav.siteNav {
 @media screen and (max-width: 950px) {
 
     nav.siteNav {
-
+         padding-left: 3rem;
         .platformIcon {
             span {
                 display: none;
@@ -148,8 +147,8 @@ nav.siteNav {
         }
 
         .hamburger {
-            // display: block;
-                        // padding-right: 1.5rem;
+            display: block;
+                       
 
             position: relative;
             transform: rotate(0deg);
