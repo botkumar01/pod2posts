@@ -1,6 +1,8 @@
 import "./HomePage.scss";
+// import { motion, Variants } from "framer-motion";
 import { motion } from "framer-motion";
 
+import { Variants, Transition } from "framer-motion";
 import Nav from "../components/Nav/Nav";
 import Button from "../components/Button";
 import InfoCard from "../components/InfoCard";
@@ -32,10 +34,18 @@ const containerVariants = {
 //   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 // };
 
-const fadeUpVariant = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+const fadeUpVariant: Variants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut" as Transition["ease"], // ✅ cast to correct type
+    },
+  },
 };
+
 const HomePage: React.FC = () => {
   return (
     <>
@@ -86,13 +96,7 @@ const HomePage: React.FC = () => {
   <motion.div variants={fadeUpVariant}> {/* content inside */}</motion.div>
 </motion.section>
 
-{/* <motion.section 
-  className="about"
-  variants={containerVariants}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
-> */}
+
   {/* <motion.div variants={fadeUpVariant}> about content</motion.div> */}
 {/* </motion.section> */}
 
