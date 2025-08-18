@@ -120,8 +120,8 @@ const HomePage: React.FC = () => {
             className="aboutImage left"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: .75 }}
-            viewport={{ once: true, amount: 0.7 }}
+            transition={{ duration: .9 }}
+            viewport={{ once: true, amount: 0.4}}
           >
             <span className="title">About PodToPosts</span>
             <div>
@@ -222,7 +222,7 @@ const HomePage: React.FC = () => {
                   ]}
                   number={3}
                   position="bottom-left"
-                  delay={1}
+                  delay={.35}
                 />
               </div>
               <div className="line"></div>
@@ -237,7 +237,7 @@ const HomePage: React.FC = () => {
                   ]}
                   number={2}
                   position="top-left"
-                  delay={.6}
+                  delay={.4}
                 />
               </div>
             </div>
