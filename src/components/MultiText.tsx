@@ -8,7 +8,7 @@ interface MultiTextProps {
 }
 
 const MultiText: React.FC<MultiTextProps> = ({
-  values = ["1X", "2X", "3X"],
+  values = ["1x", "2x", "3x"],
   interval = 1500
 }) => {
   const [index, setIndex] = useState(0);

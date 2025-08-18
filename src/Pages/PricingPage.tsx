@@ -24,7 +24,7 @@ const InfoPoint: React.FC<{ text: string | JSX.Element }> = ({ text }) => {
 const PricingPage: React.FC = () => {
   return (
     <>
-      <Nav
+      {/* <Nav
           items={[
             { title: "Platform", link: "/" },
             { title: "Solution", link: "/solution" },
@@ -32,7 +32,7 @@ const PricingPage: React.FC = () => {
             { title: "FAQ", link: "/faq" },
             { title: <Button variant="primary" />, link: "/cta" },
           ]}
-        />
+        /> */}
       <div className="pricing">
         <h1>
           <GradientText text="Pricing" />

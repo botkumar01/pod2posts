@@ -53,15 +53,18 @@ const HomePage: React.FC = () => {
   return (
     <>
       <div className="homePage">
-        <Nav
+       <div className="navv">
+         <Nav
           items={[
-            { title: "Platform", link: "/" },
+            { title: "Problem", link: "/" },
             { title: "Solution", link: "/solution" },
-            { title: "Pricing", link: "/pricing" },
+            { title: "Features", link: "/pricing" },
             { title: "FAQ", link: "/faq" },
             { title: <Button variant="primary" />, link: "/cta" },
           ]}
+          
         />
+       </div>
 
 <motion.section
   className="hero"

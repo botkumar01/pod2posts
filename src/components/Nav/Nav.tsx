@@ -22,7 +22,7 @@ const Nav: React.FC<{ items: NavItem[] }> = ({ items }) => {
       <nav className="siteNav">
         <div className="platformIcon">
           <img src={siteIcon} alt="Platform Icon" />
-          <span>PodToPosts</span>
+          <span>PotoPosts</span>
         </div>
 
         <ul className="desktopMenu">

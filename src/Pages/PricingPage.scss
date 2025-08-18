@@ -54,7 +54,20 @@
 }
 
 /* Tablets & small laptops */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1300px) {
+  .pricing {
+   
+    .tiers {
+    
+      align-items: center;
+      flex-direction: column;
+      // width: 10%;
+      // transform: scale(0.95); // slight shrink
+    }
+  }
+}
+/* Tablets & small laptops */
+@media screen and (max-width: 1100px) {
   .pricing {
     .info {
       max-width: 100%;

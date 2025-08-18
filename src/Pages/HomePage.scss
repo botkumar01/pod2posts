@@ -2,13 +2,21 @@
 .homePage {
     // account for nav.
     margin: 0 auto;
-    margin-top: 6rem;
+    // margin-top: 6rem;
 
     background-color: #fdfdfd;
     box-sizing: border-box;
     width: 100%;
     max-width: 90vw;
     overflow: hidden;
+    
+    // .navv{
+    //   // display: flex;/
+    //   // justify-content: start;
+    //   // align-items: start;
+    //   // margin-top: -100px;
+    //   padding: -100px 0 0 0px;
+    // }
 
     .hero {
         display: flex;
@@ -894,7 +902,7 @@ scale: 0.9;
 
       .hero-gradient {
         font-size: 3rem;
-        background: linear-gradient(90deg, #8e2de2, #8d2de2b3);
+        background: #8e2de2;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 700;

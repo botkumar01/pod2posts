@@ -6,7 +6,8 @@ nav.siteNav {
 
     padding:1rem 7rem;
     padding-left: 4rem;
-    padding-top: 2rem;
+    padding-top: 3rem;
+    // margin: 0%;
     justify-content: space-between;
 
     position: fixed;
@@ -19,7 +20,7 @@ nav.siteNav {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 1rem;
+        // margin-left: 1rem;
 
         img {
             height: 30px;
@@ -28,7 +29,8 @@ nav.siteNav {
         }
 
         span {
-            font-weight: 800;
+            font-size: 1.3rem;
+            font-weight: 600 !important;
             background: linear-gradient(90deg, #6B26D8, #DD7F41);
             -webkit-background-clip: text;
             background-clip: text;
@@ -41,13 +43,15 @@ nav.siteNav {
         list-style: none;
         padding: 0;
         margin: 0;
+        font-weight: 600 !important;
+
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 1.5rem;
+        gap: 3rem;
 
         li a {
-            font-weight: 600 !important;
+            font-weight: 500 !important;
         }
     }
 
@@ -115,6 +119,54 @@ nav.siteNav {
 .mobileMenu.open {
     transform: translateY(0);
 }
+.mobileMenu {
+    margin-top: 5.8rem;
+    position: fixed;   // ✅ was absolute
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 8 !important;
+    box-sizing: border-box;
+    border-radius: 0 0 1rem 1rem;
+    transform: translateY(-400%);
+    transition: all .3s ease;
+}
+@media screen and (max-width: 950px) {
+
+    nav.siteNav {
+
+        .platformIcon {
+            span {
+                display: none;
+            }
+        }
+
+        ul.desktopMenu {
+            display: none;
+        }
+
+        .hamburger {
+            // display: block;
+                        // padding-right: 1.5rem;
+
+            position: relative;
+            transform: rotate(0deg);
+            transform-origin: center center;
+            transition: all .2s ease;
+
+            // display: flex;
+            justify-content: center;
+
+            &.open {
+                transform: rotate(45deg);
+            }
+        }
+
+    }
+
+}
 
 @media screen and (max-width: 800px) {
 
@@ -131,8 +183,11 @@ nav.siteNav {
         }
 
         .hamburger {
-            display: block;
-            padding-right: 1.5rem;
+            display: flex;
+            // position: relative;
+                        // justify-content: end;
+                        margin-left: 100% !important;
+            // padding-right: 5.5rem;
             transform: rotate(0deg);
             transform-origin: center center;
             transition: all .2s ease;
@@ -141,6 +196,7 @@ nav.siteNav {
             justify-content: center;
 
             &.open {
+                // position: fixed;
                 transform: rotate(45deg);
             }
         }
