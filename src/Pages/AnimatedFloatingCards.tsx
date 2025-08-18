@@ -1,7 +1,7 @@
 import { useRef, useLayoutEffect, useState, useEffect } from "react";
 import FeatureCard from "../components/FeatureCard";
 import logo from "../assets/BigLogo.png";
-import audioIcon from "../assets/audio.png";
+
 import growIcon from "../assets/small_icons/i1.png";
 import peopleIcon from "../assets/small_icons/i2.png";
 import circles from "../assets/circles.png";

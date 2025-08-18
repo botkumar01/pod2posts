@@ -814,18 +814,7 @@ scale: 0.9;
       }
     }
   }
-}
-@media screen and (max-width: 600px) {
-  .cardsContainer {
-    .floaters {
-      .row {
-        .Fcard {
-          // min-width: 300px;  // smaller for tablets/large phones
-        }
-      }
-    }
-  }
-}
+}\
 
 /* ✅ Extra small (mobile) */
 @media screen and (max-width: 400px) {
