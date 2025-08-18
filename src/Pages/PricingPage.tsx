@@ -3,11 +3,11 @@ import "./PricingPage.scss";
 
 import GradientText from "../components/GradientText";
 import PricingCard from "../components/PricingCard/PricingCard";
-import Nav from "../components/Nav/Nav";
+// import Nav from "../components/Nav/Nav";
 
 import gradientTick from "../assets/price_imgs/gradient_tick.png";
 import type { JSX } from "react";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 
 import purpleComingSoon from "../assets/price_imgs/purple_coming_soon.png";
 import orangeComingSoon from "../assets/price_imgs/orange_coming_soon.png";
