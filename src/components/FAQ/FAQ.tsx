@@ -24,7 +24,8 @@ const FAQ: React.FC<FAQProps> = ({ items }) => {
       {items.map((item, index) => (
         <div key={index} className="faq-item">
           <button className="faq-question" onClick={() => toggleFAQ(index)}>
-            <span>{item.question}</span>
+<span className="quizz">{item.question}</span>
+
             <span className={`faq-arrow ${openIndex === index ? "open" : ""}`}>
   <img 
     src={arrw}

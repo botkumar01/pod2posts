@@ -4,6 +4,8 @@ import logo from "../assets/BigLogo.png";
 import audioIcon from "../assets/audio.png";
 import growIcon from "../assets/small_icons/i1.png";
 import peopleIcon from "../assets/small_icons/i2.png";
+import circles from "../assets/circles.png";
+import i6 from "../assets/small_icons/i6.png";
 import commentIcon from "../assets/small_icons/i4.png";
 import calendarIcon from "../assets/small_icons/i5.png";
 import "./AnimatedFloatingCards.scss";
@@ -28,16 +30,30 @@ const cards = [
   {
     title: "Smart Content Extraction",
     description: "AI finds the most shareable moments from your episodes",
-    iconSrc: audioIcon,
+    iconSrc: circles,
     row: 0,
     col: 0,
+  },
+   {
+    title: "Engagement-Driving Captions",
+    description: "AI writes posts that spark conversations, drive discovery.",
+    iconSrc: commentIcon,
+    row: 1,
+    col: 1,
   },
   {
     title: "Professional Templates",
     description: "Designs that make you look like you hired a team",
-    iconSrc: audioIcon,
+    iconSrc: i6,
     row: 0,
     col: 1,
+  },
+   {
+    title: "Promotion Calendar",
+    description: "Plan your content weeks ahead for consistent growth",
+    iconSrc: calendarIcon,
+    row: 2,
+    col: 0,
   },
   {
     title: "Growth-Optimized Formats",
@@ -46,20 +62,8 @@ const cards = [
     row: 1,
     col: 0,
   },
-  {
-    title: "Engagement-Driving Captions",
-    description: "AI writes posts that spark conversations, drive discovery.",
-    iconSrc: commentIcon,
-    row: 1,
-    col: 1,
-  },
-  {
-    title: "Promotion Calendar",
-    description: "Plan your content weeks ahead for consistent growth",
-    iconSrc: calendarIcon,
-    row: 2,
-    col: 0,
-  },
+ 
+ 
   {
     title: "New Audience Discovery",
     description: "Reach people who would never search for podcasts",

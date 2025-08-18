@@ -2,7 +2,7 @@ import "./HomePage.scss";
 // import { motion, Variants } from "framer-motion";
 import { motion } from "framer-motion";
 
-import { Variants, Transition } from "framer-motion";
+import type { Variants, Transition } from "framer-motion";
 import Nav from "../components/Nav/Nav";
 import Button from "../components/Button";
 import InfoCard from "../components/InfoCard";
@@ -13,6 +13,9 @@ import SuperchargeSection from "./SuperchargeSection/SuperchargeSection";
 import Footer from "./Footer";
 import MultiText from "../components/MultiText";
 import audioIcon from "../assets/audio.png";
+import Target from "../assets/circles.png";
+import clock from "../assets/clock.png";
+
 import girlPod from "../assets/Girl.png";
 import convo from "../assets/convo.png";
 
@@ -149,7 +152,7 @@ const HomePage: React.FC = () => {
           />
 
           <InfoCard
-            icon={audioIcon}
+            icon={clock}
             title="Competing with Millions"
             description="Your amazing content gets lost in the podcast noise."
             linkText="No Discovery"
@@ -158,7 +161,7 @@ const HomePage: React.FC = () => {
           />
 
           <InfoCard
-            icon={audioIcon}
+            icon={Target}
             title="Too Busy Creating to Promote"
             description="You focus on episodes but have no time for marketing"
             linkText="Show Growth"

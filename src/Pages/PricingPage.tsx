@@ -62,8 +62,8 @@ const PricingPage: React.FC = () => {
           <PricingCard
             title="Starter"
             description="Recommended for weekly podcasts."
-            originalPrice="$29"
-            discountedPrice="$19"
+            originalPrice="$19"
+            discountedPrice="$9.50"
             color="white"
             points={[
               "5 episodes / month",
@@ -76,8 +76,8 @@ const PricingPage: React.FC = () => {
           <PricingCard
             title="Professional"
             description="Recommended for weekly podcasts."
-            originalPrice="$29"
-            discountedPrice="$19"
+            originalPrice="$39"
+            discountedPrice="$19.50"
             color="purple"
             points={[
               "Unlimited Episodes",
@@ -93,8 +93,8 @@ const PricingPage: React.FC = () => {
           <PricingCard
             title="Agency"
             description="Recommended for weekly podcasts."
-            originalPrice="$29"
-            discountedPrice="$19"
+            originalPrice="$79"
+            discountedPrice="$39.50"
             color="orange"
             points={[
               "Everything in Professional",

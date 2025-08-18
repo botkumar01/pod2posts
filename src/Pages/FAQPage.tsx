@@ -5,23 +5,23 @@ import "./FAQPage.scss"; // Use SCSS for styling and media queries
 
 const faqData: FAQItem[] = [
   {
-    question: "How do I sign up?",
+    question: "I’ve never made a carousel before. Is this really for me?",
     answer: "Click the 'Get Started' button and fill in your details.",
   },
   {
-    question: "Is this service free?",
+    question: "What if I already use Canva?",
     answer: "We have both free and paid plans depending on your needs.",
   },
   {
-    question: "Can I cancel anytime?",
+    question: "Do the Carousels actually look professional?",
     answer: "Yes, you can cancel your subscription at any time.",
   },
   {
-    question: "Do you offer support?",
+    question: "What about other content types?",
     answer: "Yes, you can contact us via email or live chat.",
   },
   {
-    question: "Can I use this on mobile?",
+    question: "How many carousels can I create?",
     answer: "Absolutely! Our platform works perfectly on mobile devices.",
   },
 ];
