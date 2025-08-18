@@ -17,22 +17,21 @@ const SuperchargeSection = () => {
         </div>
       </div>
 
-   <motion.div
-      className="supercharge-image"
-      initial={{ 
-        opacity: 0.1,                          // slightly visible at start
-        clipPath: "polygon(0% 55%, 100% 100%, 100% 100%, 0% 100%)" // diagonal mask
-      }}
-      whileInView={{ 
-        opacity: .6, 
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" // fully visible
-      }}
-      transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.2 }}
-    >
-      <img src={Social} alt="Social Media Icons" />
-      <div className="fade-overlay"></div>
-    </motion.div>
+<motion.div
+  className="supercharge-image"
+  initial={{ opacity: 0, y: 100, scale: 1 }}
+  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  viewport={{ once: true, amount: 0.3 }}
+>
+  <img src={Social} alt="Social Media Icons" />
+
+  {/* Overlay for fading top & bottom */}
+  <div className="fade-overlay"></div>
+</motion.div>
+
+
+
 </div>
     // </div>
   );       

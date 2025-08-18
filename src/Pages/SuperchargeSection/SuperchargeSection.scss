@@ -1,3 +1,60 @@
+// .supercharge-section {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: #7409ff1c;
+//   border-radius: 26px;
+//   width: 80%;
+//   margin: 15px auto; // ✅ centers the section
+//   position: relative;
+//     overflow: hidden; // ensures the image can animate in without being clipped
+
+
+//   .supercharge-content {
+//     flex: 1;
+//     z-index: 2;
+//     margin: 0 0 0 2rem;
+// h2 {
+//   font-size: 28px;
+//   font-weight: 600;
+//   margin-bottom: 1rem;
+//     //  margin: 0 0 0 2rem;
+
+//   background: linear-gradient(90deg, #6B26D8, #3A0086);
+//   -webkit-background-clip: text; /* for Chrome, Safari */
+//   -webkit-text-fill-color: transparent;
+//   background-clip: text; /* for Firefox */
+//   color: transparent; /* fallback */
+// }
+
+//   }
+
+//   .supercharge-image {
+//     flex: 1;
+//     scale: 1;
+//     position: relative;
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+
+//     img {
+//       max-width: 300px;
+//       height: auto;
+//       background-color: #591fb600;
+//       z-index: 1;
+//     }
+
+//     .fade-overlay {
+      
+//       position: absolute;
+//       inset: 0;
+//     //   background: radial-gradient(circle, rgba(250,247,255,0) 20%, rgba(250,247,255,1) 100%);
+//       pointer-events: none;
+//       z-index: 2;
+//     }
+//   }
+// }
+/* ----------------------------Large screens (default) - No changes needed since it's already flex row */
 .supercharge-section {
   display: flex;
   align-items: center;
@@ -5,52 +62,147 @@
   background-color: #7409ff1c;
   border-radius: 26px;
   width: 80%;
-  margin: 15px auto; // ✅ centers the section
+  margin: 15px auto;
   position: relative;
-
+  overflow: hidden;
 
   .supercharge-content {
     flex: 1;
     z-index: 2;
     margin: 0 0 0 2rem;
-h2 {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, #6B26D8, #3A0086);
-  -webkit-background-clip: text; /* for Chrome, Safari */
-  -webkit-text-fill-color: transparent;
-  background-clip: text; /* for Firefox */
-  color: transparent; /* fallback */
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #6B26D8, #3A0086);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+.supercharge-image img {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,    /* top fade at 30% opacity */
+    rgba(0, 0, 0, 1) 25%,     /* fully visible starts */
+    rgba(0, 0, 0, 1) 75%,     /* fully visible ends */
+    rgba(0, 0, 0, 0.3) 100%   /* bottom fade at 30% opacity */
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 1) 75%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
 }
 
-  }
 
   .supercharge-image {
     flex: 1;
-    scale: 1;
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
     img {
+      width: 100%;
       max-width: 300px;
       height: auto;
-      background-color: #591fb600;
+      object-fit: cover;
+      background-color: transparent;
       z-index: 1;
     }
 
-    .fade-overlay {
-      position: absolute;
-      inset: 0;
-    //   background: radial-gradient(circle, rgba(250,247,255,0) 20%, rgba(250,247,255,1) 100%);
-      pointer-events: none;
-      z-index: 2;
+    // .fade-overlay {
+    //   position: absolute;
+    //   inset: 0;
+    //   pointer-events: none;
+    //   z-index: 2;
+    // }
+  
+ 
+  }
+}
+
+/* 🔹 Responsive Adjustments */
+@media (max-width: 1200px) {
+  .supercharge-section {
+    .supercharge-content h2 {
+      font-size: 26px;
+    }
+    .supercharge-image img {
+      max-width: 260px !important;
     }
   }
 }
-/* Large screens (default) - No changes needed since it's already flex row */
+
+@media (max-width: 992px) {
+  .supercharge-section {
+    // flex-direction: column; /* Stack content & image */
+    text-align: center;
+
+    .supercharge-content {
+      margin: 1rem 0;
+    }
+
+    .supercharge-content h2 {
+      font-size: 24px;
+    }
+
+    // .supercharge-image img {
+    //   max-width: 240px;
+    // }
+  }
+}
+
+@media (max-width: 768px) {
+  .supercharge-section {
+    width: 90%;
+
+    .supercharge-content h2 {
+      font-size: 22px;
+    }
+
+    // .supercharge-image img {
+    //   max-width: 50% !important;
+    // }
+  }
+}
+
+@media (max-width: 576px) {
+  .supercharge-section {
+    .supercharge-content h2 {
+      font-size: 20px;
+    }
+
+    .supercharge-image img {
+      max-width: 200px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .supercharge-section {
+    // width: 95%;
+    .supercharge-content h2 {
+      font-size: 18px;
+    }
+
+    .supercharge-image img {
+    width: 190px !important;
+    }
+  }
+}
+
+// ------------------
+
 
 /* 1200px and below - slight adjustments for large tablets / small laptops */
 /* Large screens (default) - no change */
@@ -132,17 +284,17 @@ h2 {
     .supercharge-image {
       position: absolute;
       top: 0;
-      left: 40%;
-      width: 70%;
+      left: 55%;
+      width: 50%;
       height: 100%; /* ✅ fill section */
       display: flex;
       justify-content: center;
       align-items: center;
-      opacity: 0.4;
+      opacity: 0.6 !important;
       z-index: 1;
 
       img {
-        width: 80%; /* ✅ scale to fit inside */
+        // width: 80%; /* ✅ scale to fit inside */
         height: auto;
         max-width: none; /* let width control scaling */
       }
@@ -170,8 +322,8 @@ h2 {
     .supercharge-image {
       position: absolute;
       top: 0;
-      left: 45%;
-      width: 80%;
+      left: 50%;
+      width: 60% !important;
       
       height: 100%; /* ✅ fill section */
       display: flex;
@@ -181,9 +333,9 @@ h2 {
       z-index: 1;
 
       img {
-        width: 90%; /* ✅ scale to fit inside */
+        width: 100% !important; /* ✅ scale to fit inside */
         height: auto;
-        max-width: none; /* let width control scaling */
+        // max-width: none; /* let width control scaling */
       }
     }
   }
