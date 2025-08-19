@@ -1,26 +1,13 @@
-nav.siteNav {
-    z-index: 99 !important;
-    background-color: #fff;
+.platformIcon {
     display: flex;
     align-items: center;
 
-    padding:1rem 7rem;
-    padding-left: 4rem;
-    padding-top: 3rem;
-    // margin: 0%;
-    justify-content: space-between;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    box-sizing: border-box;
-
-    .platformIcon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // margin-left: 1rem;
+    position: fixed;    /* ✅ stays fixed in viewport */
+    top: .5rem;   
+    padding: 1rem;  
+    padding-left: 0rem;     /* adjust vertical position */
+    // left: 3rem;         /* adjust horizontal position */
+    z-index: 100;       /* make sure it stays above other elements */
 
         img {
             height: 30px;
@@ -30,7 +17,7 @@ nav.siteNav {
 
         span {
             font-size: 1.3rem;
-            font-weight: 600 !important;
+            font-weight: 500 !important;
             background: linear-gradient(90deg, #6B26D8, #DD7F41);
             -webkit-background-clip: text;
             background-clip: text;
@@ -38,11 +25,35 @@ nav.siteNav {
         }
 
     }
+nav.siteNav {
+    z-index: 99 !important;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+
+    padding:1rem 0rem;
+    // nav.siteNav ul {
+    // margin: 30px auto ;   /* ✅ centers the <ul> inside nav */
+    // padding-left: 4rem;
+    // padding-top: 2rem;
+    // margin: 0%;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    
 
     ul {
         list-style: none;
         padding: 0;
         margin: 0;
+        width: 100%;
+            // margin-left: -3rem;
+
         font-weight: 600 !important;
 
         display: flex;
@@ -85,7 +96,7 @@ nav.siteNav {
 
     ul {
         flex-direction: column;
-        padding: 1rem 0;
+        // padding: 1rem 0;
         list-style: none;
         padding: 0;
         margin: 0;
@@ -96,7 +107,7 @@ nav.siteNav {
         padding-bottom: 2rem;
 
         li {
-            padding: 0.5rem 1rem;
+            // padding: 0.5rem 1rem;
             border-radius: 2rem;
 
             a {
@@ -132,9 +143,55 @@ nav.siteNav {
     transform: translateY(-400%);
     transition: all .3s ease;
 }
+
+/* ✅ Reduce font sizes for large-to-mid breakpoints */
+
+@media screen and (max-width: 1200px) {
+    nav.siteNav ul li a {
+        font-size: 0.95rem;   /* slightly smaller */
+    }
+
+    .platformIcon span {
+        font-size: 1.2rem;    /* reduce logo text */
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    nav.siteNav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .platformIcon span {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    nav.siteNav ul li a {
+        font-size: 0.85rem;
+    }
+
+    .platformIcon span {
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+.platformIcon {
+    // z-index: 0 !important;
+    width: fit-content;
+    padding-top: 1rem;
+    // max-width: 10% !important;
+            span {
+                display: none;
+            }
+        }
+    }
 @media screen and (max-width: 950px) {
 
     nav.siteNav {
+        padding-top: 1.5rem;
          padding-left: 3rem;
         .platformIcon {
             span {
@@ -148,7 +205,7 @@ nav.siteNav {
 
         .hamburger {
             display: block;
-                       
+                        padding-right: 5rem;
 
             position: relative;
             transform: rotate(0deg);
@@ -166,27 +223,52 @@ nav.siteNav {
     }
 
 }
-
-@media screen and (max-width: 800px) {
-
-    nav.siteNav {
-
-        .platformIcon {
+@media screen and (max-width: 600px) {
+.platformIcon {
+    // z-index: 0 !important;
+    width: fit-content;
+    // max-width: 10% !important;
+    padding-left: 10%;
             span {
                 display: none;
             }
         }
+ .hamburger {
+            // display: flex;
+            // position: relative;
+                        justify-content: end;
+                        // margin-left: 100% !important;
+            padding-right: 10%!important;
+            
+
+           
+    
+        }
+    }
+@media screen and (max-width: 800px) {
+.platformIcon {
+    // z-index: 0 !important;
+    width: fit-content;
+    // max-width: 10% !important;
+    padding-left: 2rem;
+            span {
+                display: none;
+            }
+        }
+    nav.siteNav {
+
+     
 
         ul.desktopMenu {
             display: none;
         }
 
         .hamburger {
-            display: flex;
+            // display: flex;
             // position: relative;
-                        // justify-content: end;
-                        margin-left: 100% !important;
-            // padding-right: 5.5rem;
+                        justify-content: end;
+                        // margin-left: 100% !important;
+            // padding-right: 2rem !important;
             transform: rotate(0deg);
             transform-origin: center center;
             transition: all .2s ease;

@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <div className="homePage">
-       <div className="navv">
+       {/* <div className="navv"> */}
          <Nav
           items={[
             { title: "Problem", link: "/" },
@@ -64,7 +64,7 @@ const HomePage: React.FC = () => {
           ]}
           
         />
-       </div>
+       {/* </div> */}
 
 <motion.section
   className="hero"
@@ -124,6 +124,7 @@ const HomePage: React.FC = () => {
             viewport={{ once: true, amount: 0.4}}
           >
             <span className="title">About PodToPosts</span>
+            
             <div>
               <h2 className="boldText">1K+</h2>
               <span className="subtext">Pods converted to Posts</span>

@@ -19,11 +19,12 @@ const Nav: React.FC<{ items: NavItem[] }> = ({ items }) => {
 
   return (
     <>
-      <nav className="siteNav">
-        <div className="platformIcon">
+    <div className="platformIcon">
           <img src={siteIcon} alt="Platform Icon" />
           <span>PotoPosts</span>
         </div>
+      <nav className="siteNav">
+        
 
         <ul className="desktopMenu">
           {items.map((item) => (
