@@ -69,6 +69,8 @@
   .supercharge-content {
     flex: 1;
     z-index: 2;
+   
+
     margin: 0 0 0 2rem;
 
     h2 {
@@ -123,6 +125,7 @@ mask-size: cover;
     flex: 1;
     position: relative;
     display: flex;
+    
     justify-content: flex-end;
     align-items: center;
 
@@ -211,7 +214,7 @@ mask-size: cover;
     }
 
     .supercharge-image img {
-    width: 190px !important;
+    width: 250px !important;
     }
   }
 }
@@ -279,7 +282,7 @@ mask-size: cover;
 }
 
 /* 500px and below - mobile layout with image below text */
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   .supercharge-section {
     flex-direction: column;
     text-align: center;
@@ -299,15 +302,19 @@ mask-size: cover;
     .supercharge-image {
       position: absolute;
       top: 0;
-      left: 55%;
+      left: 60%;
       width: 50%;
       height: 100%; /* ✅ fill section */
       display: flex;
       justify-content: center;
       align-items: center;
-      opacity: 0.6 !important;
+      opacity: 0.9 !important;
       z-index: 1;
-
+      scale: .8;
+      -webkit-mask-image: none !important;
+      mask-image: none !important;
+      mask-repeat: no-repeat;
+      mask-size: cover;
       img {
         // width: 80%; /* ✅ scale to fit inside */
         height: auto;
@@ -348,8 +355,9 @@ mask-size: cover;
       z-index: 1;
 
       img {
-        width: 100% !important; /* ✅ scale to fit inside */
+        min-width: 240px !important; /* ✅ scale to fit inside */
         height: auto;
+        opacity: .6;
         // max-width: none; /* let width control scaling */
       }
     }
@@ -383,3 +391,33 @@ mask-size: cover;
     font-size: 0.8rem;
   }
 }
+
+// @media (max-width: 700px) {
+//   .supercharge-section {
+//     flex-direction: column;      // stack text above image
+//     align-items: center;         // center horizontally
+//     overflow: visible;           // allow image to show fully
+
+//     .supercharge-content {
+//       margin: 1rem 0;
+//       text-align: center;
+//       z-index: 2;
+//     }
+
+//     .supercharge-image {
+//       position: relative;        // keep inside parent
+//       width: 100%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       margin-top: 1rem;  
+//       padding-right: 500px;        // spacing below text
+//       opacity: 1 !important;
+
+//       img {
+//         max-width: 50% !important;          // scale nicely
+//         height: auto;
+//       }
+//     }
+//   }
+// }

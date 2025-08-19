@@ -130,8 +130,11 @@ button.orange {
 
 @media screen and (max-width: 700px) {
   button,
-  .btn,
- 
+  .btn{
+    /* width: 9000px !important; */
+    font-size: 0.9rem !important;
+  }
+
   .gradient-text {
     font-size: 17px;
   }
@@ -141,7 +144,7 @@ button.orange {
   button,
   .btn,
   .gradient-text {
-    font-size: 0.7rem;
+    font-size: 0.9rem !important;
   }
   .gradient-text {
     font-size: 14px;
