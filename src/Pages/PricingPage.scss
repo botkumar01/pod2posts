@@ -120,16 +120,16 @@ gap: 1rem;
     }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         max-width: max-content;
         margin: 0 auto;
         text-align: center;
     }
 
     .info {
-      padding-left: 15%;
+      padding-left: 5%;
       .infoPoint span {
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
     }
 
@@ -138,8 +138,21 @@ gap: 1rem;
   }
 }
 /* Small phones */
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 620px) {
   .pricing{
+    h1{
+     span.gradient-text {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+    }
+     h3 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        max-width: max-content;
+        margin: 0 auto;
+        text-align: center;
+    }
   .info {
         padding-left: 10%;
       .infoPoint span {
@@ -152,6 +165,7 @@ gap: 1rem;
 
 @media screen and (max-width: 480px) {
   .pricing {
+    margin-top: 0px;
         h3 {
         font-size: 1rem;
         max-width: max-content;
