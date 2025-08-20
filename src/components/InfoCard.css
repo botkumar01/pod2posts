@@ -2,20 +2,23 @@
   /* display: flex; */
   /* flex-direction: row; */
   gap: 12px;
-  padding: 1.5rem;
-  /* border: 1px solid #9c9b9b;
-  border-bottom: 3px solid #9c9b9b;
-  border-right: 0px; */
-  border-radius: 20px;
-  background: #fff;
-
+  padding: 2rem;
+  padding-left: 1rem;
+  /* padding-right: 1rem; */
+  
+   border: 1px solid #0000001d;
+  /* border-bottom: 3px solid #9c9b9b;
+  border-right: 0px; */ 
+  border-radius: 25px;
+  background: #f8f8f8bd;
+  /* border: #555; */
   /* shadow effect */
-  box-shadow: 0 4px 5px 2px rgba(102, 99, 99, .25);
+  box-shadow: 0 4px 5px 0px rgba(102, 99, 99, .25);
 }
 
 .icon-container {
-  width: 30px;
-  height: 30px;
+  /* min-width: 40px !important; */
+  /* height: 50px; */
   /* border-radius: 50%; */
   /* display: flex; */
   align-items: center;
@@ -38,7 +41,7 @@
 
 .card-title {
   font-family: "Geist", sans-serif;
-  font-weight: 600; /* semibold */
+  font-weight: 500; /* semibold */
   font-size: 20px;
   margin-top: 1.25rem;
   margin-bottom: .25rem;
@@ -67,3 +70,11 @@
 .card-link:hover {
   color: #8a56dd;
 }
+@media (min-width: 1100px) and (max-width: 1200px){
+    .card-title {
+    font-size: 18px;
+    }
+    .card-description{
+      font-size: 12px;
+    }
+  }

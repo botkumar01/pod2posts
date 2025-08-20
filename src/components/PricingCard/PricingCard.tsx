@@ -58,7 +58,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ title, description, originalP
                     {discountedPrice}
                 </span>
                 {" "}
-                for life
+                for month
             </div>
             <div className="tierInfo">
                 <ul>

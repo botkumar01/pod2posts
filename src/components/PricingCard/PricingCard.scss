@@ -35,7 +35,7 @@
         justify-content: center;
         align-items: center;
         gap: .5rem;
-        font-size: 2.25rem;
+        font-size: 2.5rem;
         font-weight: 500;
         margin: 0;
         margin-top: 2rem;
@@ -48,12 +48,12 @@
     p.desc {
         margin: 0;
         opacity: .8;
-        font-size: .8rem;
+        font-size: .9rem;
     }
 
     .price {
         margin-top: 1rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: grey;
 
         .original {
@@ -73,14 +73,14 @@
             list-style: none;
             padding: 0;
             // gap: .95rem;
-            line-height: 1.7rem;
+            line-height: 2.5rem;
             li {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 gap: .35rem;
                 margin-bottom: .5rem;
-                font-size: .8rem;
+                font-size: .85rem;
 
                 img {
                     display: inline;
@@ -88,8 +88,8 @@
                 }
 
                 img.tickImage {
-                    height: 18px;
-                    width: 18px;
+                    height: 20px;
+                    width: 20px;
                     object-fit: contain;
                 }
             }

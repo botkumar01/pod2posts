@@ -151,20 +151,22 @@
 
         .vcmText {
             width: 100%;
-            // padding: 0 2rem;
+            padding: 0 2rem;
 
             .subtext {
-                color: rgb(123, 61, 184);
+                color: rgb(134, 14, 255);
                 font-weight: 600;
             }
 
             h1 {
                 margin-top: 1rem;
+                
             }
 
             .cardsContainer {
                 width: 99%;
                 margin-top: 3rem;
+                padding-left: 2rem;
 
                 .row {
                     &.row1 {
@@ -275,9 +277,29 @@
     }
 
 }
+@media screen and (max-width: 1300px) {
+ .vcmSection {
+   .vcmText{
+      .cardsContainer {
+        margin-left: -6%;
+      }
+  }
+        display: flex;
+        gap: 1rem !important;
+        // margin: 2rem;
+        
+        h1 {
+            margin: 0;
+            font-size: 1.9rem !important;
+            font-weight: 600 !important;
 
+            .gradient-text {
+                font-size: 2rem;
+            }
+        }}}
 @media screen and (max-width: 1200px) {
  .vcmSection {
+ 
         display: flex;
         gap: 3rem !important;
         // margin: 2rem;
@@ -932,15 +954,14 @@ scale: 0.9;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0;
-
+    padding: 3rem 0;
     .hero-title {
       font-weight: 500;
       font-size: 3rem;
       text-align: center;
       width: min(800px, 90%);
       margin-bottom: 0;
-
+      line-height: 4.5rem;
       .hero-gradient {
         font-size: 3rem;
         background: #8e2de2;
@@ -1020,16 +1041,17 @@ scale: 0.9;
     }
 
     .aboutText {
-      flex: 2.7;
+      flex: 3.5;
 
       &.right {
         /* any specific right styles if needed */
       }
 
       h2 {
-        font-size: 2.2rem !important;
+        font-size: 2.4em !important;
         margin-bottom: 1rem;
-        line-height: 2.5rem !important;
+        color: black;
+        line-height: 3.5rem !important;
         font-weight: 600 !important;
       }
     }
@@ -1055,10 +1077,11 @@ scale: 0.9;
 
     .hero {
       flex-direction: column;
-      padding: 2.5% 0;
+      padding-bottom: 10%px;
 
       .hero-title {
-        font-size: 2.2rem !important;
+        width: 95% !important;
+        font-size: 3.5rem !important;
         line-height: 1.2 !important;
         text-align: center;
          .hero-gradient{
@@ -1067,7 +1090,7 @@ scale: 0.9;
       }
 
       .hero-subtitle {
-        font-size: .8rem !important;
+        font-size: 1rem !important;
         line-height: 1.2 !important;
         text-align: center;
       }
@@ -1133,13 +1156,13 @@ scale: 0.9;
       // padding: 2% 0;
 
       .hero-title {
-        font-size: 2rem !important;
+        font-size: 3rem !important;
         line-height: 1.2 !important;
         text-align: center;
       }
 
       .hero-subtitle {
-        font-size: .7rem !important;
+        font-size: .8rem !important;
         line-height: 1.3 !important;
         text-align: center;
       }
@@ -1149,7 +1172,8 @@ scale: 0.9;
         // gap: 0.8rem;
 
         button {
-          font-size: 0.95rem !important;
+          font-size: 1.2rem !important;
+          padding:10px 80px;
         }
       }
     }
@@ -1205,13 +1229,13 @@ scale: 0.9;
       // padding: 3% 0;
 
       .hero-title {
-        font-size: 1.7rem !important;
+        font-size: 2.5rem !important;
         line-height: 1.15 !important;
         text-align: center;
       }
 
       .hero-subtitle {
-        font-size: 0.5rem !important;
+        font-size: 0.7rem !important;
         line-height: 1.2 !important;
         text-align: center;
       }
@@ -1273,7 +1297,7 @@ scale: 0.9;
       // padding: 2% 0;
 
       .hero-title {
-        font-size: 1.4rem !important;
+        font-size: 2.2rem !important;
         line-height: 1.2 !important;
         text-align: center;
       }
@@ -1369,12 +1393,12 @@ scale: 0.9;
 }
 .homePage {
   .placeholderImage {
-    border-radius: 1rem;
+    border-radius: 2rem !important;
     margin: 0 auto;
     // margin:0 20px;
     // padding: ;
-    width: 100%;
-    height: 500px; // default height
+    width: 90%;
+    height: 600px !important; // default height
     background-color: black;
     position: relative;
     overflow: hidden;
@@ -1446,4 +1470,48 @@ scale: 0.9;
 }
 @media (max-width: 320px) {
   .homePage .placeholderImage { height: 140px; }
+}
+  /* Extra small screens (phones) */
+.homePage {
+  .placeholderImage {
+    border-radius: 1rem;
+    margin: 0 auto;
+    width: 95% !important;
+    height: 600px !important; // default (desktop)
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+
+    /* -------- Media Queries -------- */
+    
+    /* Extra small screens (phones) */
+    @media (max-width: 480px) {
+      width: 95%;
+      height: 220px !important;
+    }
+
+    /* Small tablets (landscape phones / small tablets) */
+    @media (min-width: 481px) and (max-width: 768px) {
+      width:80%;
+      height: 280px !important;
+    }
+
+    /* Medium tablets (iPad portrait / small laptops) */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      width: 90%;
+      height: 400px !important;
+    }
+
+    /* Laptops / small desktops */
+    @media (min-width: 1025px) and (max-width: 1366px) {
+      width: 88%;
+      height: 500px !important;
+    }
+
+    /* Large desktops */
+    @media (min-width: 1367px) {
+      width: 85%;
+      height: 600px !important;
+    }
+  }
 }
