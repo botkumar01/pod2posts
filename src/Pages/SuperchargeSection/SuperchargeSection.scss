@@ -61,23 +61,31 @@
   justify-content: center;
   background-color: #7409ff1c;
   border-radius: 26px;
-  width: 80%;
+  width: 100%;
+  height: auto;
   margin: 15px auto;
   position: relative;
   overflow: hidden;
-
   .supercharge-content {
     flex: 1;
     z-index: 2;
-   
+               padding-left: 2rem;
 
-    margin: 0 0 0 2rem;
 
+    // margin: 4rem 0 4rem 4rem;
+    .but{
+          margin: 4rem 0 4rem 4rem;
+
+    }
     h2 {
-      font-size: 28px;
+    margin: 4rem 0 4rem 4rem;
+
+      font-size: 40px;
+      width: 100%;
       font-weight: 600;
-      margin-bottom: 1rem;
-      background: linear-gradient(90deg, #6B26D8, #3A0086);
+      // margin-left: 2rem;
+      // margin-bottom: 1rem;
+      background: linear-gradient(90deg,#3A0086, #5607d5);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -131,7 +139,8 @@ mask-size: cover;
 
     img {
       width: 100%;
-      max-width: 300px;
+      max-width: 450px;
+      margin: 0% !important;
       height: auto;
       object-fit: cover;
       background-color: transparent;
@@ -152,9 +161,15 @@ mask-size: cover;
 /* 🔹 Responsive Adjustments */
 @media (max-width: 1200px) {
   .supercharge-section {
-    .supercharge-content h2 {
+    .supercharge-content{
+      .but{
+            margin: 2rem 0 2rem 2rem;
+
+      }
+     h2{
+    margin: 2rem 0 2rem 2rem;
       font-size: 26px;
-    }
+    }}
     .supercharge-image img {
       max-width: 260px !important;
     }
@@ -164,14 +179,15 @@ mask-size: cover;
 @media (max-width: 992px) {
   .supercharge-section {
     // flex-direction: column; /* Stack content & image */
-    text-align: center;
+    // text-align: center;
 
-    .supercharge-content {
-      margin: 1rem 0;
-    }
+    // .supercharge-content {
+    //   margin: 1rem 0;
+    // }
 
     .supercharge-content h2 {
       font-size: 24px;
+      text-align: left;
     }
 
     // .supercharge-image img {
@@ -182,7 +198,7 @@ mask-size: cover;
 
 @media (max-width: 768px) {
   .supercharge-section {
-    width: 90%;
+    // width: 90%;
 
     .supercharge-content h2 {
       font-size: 22px;
@@ -226,13 +242,13 @@ mask-size: cover;
 /* Large screens (default) - no change */
 
 /* 1200px and below */
-@media (max-width: 1200px) {
-  .supercharge-section {
-    .supercharge-content h2 {
-      font-size: 26px; /* slightly smaller */
-    }
-  }
-}
+// @media (max-width: 1200px) {
+//   .supercharge-section {
+//     .supercharge-content h2 {
+//       font-size: 26px; /* slightly smaller */
+//     }
+//   }
+// }
 
 /* 992px and below - tablets */
 @media (max-width: 992px) {
@@ -247,13 +263,13 @@ mask-size: cover;
 @media (max-width: 768px) {
   .supercharge-section {
     // flex-direction: column;
-    text-align: center;
+    // text-align: center;
 
     .supercharge-content {
-      margin-bottom: 1.5rem;
+      // margin-bottom: 1.5rem;
 
       h2 {
-        font-size: 20px; /* smaller for better fit */
+        font-size: 24px; /* smaller for better fit */
       }
     }
 
@@ -262,13 +278,13 @@ mask-size: cover;
     }
   }
 }
-@media (max-width: 710px) {
+@media (max-width: 730px) {
   .supercharge-section {
     // flex-direction: column;
-    text-align: center;
+    // text-align: center;
 
     .supercharge-content {
-      margin-bottom: 1rem;
+      // margin-bottom: 1rem;
 
       h2 {
         font-size: 18px; /* smaller for better fit */
@@ -276,6 +292,7 @@ mask-size: cover;
     }
 
     .supercharge-image img {
+      
       max-width: 180px;
     }
   }
@@ -290,11 +307,19 @@ mask-size: cover;
     overflow: hidden; /* ✅ keeps image inside card */
 
     .supercharge-content {
-      margin-top: 1rem;
+      // margin-left: 0rem;
+      padding: 5%;
+      padding-bottom: 0%;
       position: relative;
       z-index: 2; /* keep text above image */
-
+      .but{
+        margin-top: 5%;
+      }
       h2 {
+        text-align: center;
+        margin: 0%;
+        // padding: 0;
+        // margin-bottom: 0;
         font-size: 20px;
       }
     }
@@ -308,8 +333,8 @@ mask-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
-      opacity: 0.9 !important;
-      z-index: 1;
+      opacity: 0.7 !important;
+      z-index: 0;
       scale: .8;
       -webkit-mask-image: none !important;
       mask-image: none !important;
@@ -364,12 +389,12 @@ mask-size: cover;
   }
 }
 
-@media (max-width: 1200px) {
-  .but button {
-    padding: 0.6rem 1.4rem;
-    font-size: 0.95rem;
-  }
-}
+// @media (max-width: 1200px) {
+//   .but button {
+//     padding: 0.6rem 1.4rem;
+//     font-size: 0.95rem;
+//   }
+// }
 
 @media (max-width: 992px) {
   .but button {

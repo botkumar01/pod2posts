@@ -2,7 +2,7 @@
 button.primary {
   border: none;
   color: white;
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-weight: 500;
   cursor: pointer;
   background: linear-gradient(90deg, #6B26D8, #DD7F41);
@@ -142,7 +142,10 @@ button.orange {
 
 @media screen and (max-width: 400px) {
   button,
-  .btn,
+  .btn{
+    padding: 1rem;
+      font-size: 1rem !important;
+  }
   .gradient-text {
     font-size: 0.9rem !important;
   }
