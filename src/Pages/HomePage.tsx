@@ -15,7 +15,7 @@ import MultiText from "../components/MultiText";
 import audioIcon from "../assets/audio.png";
 import Target from "../assets/circles.png";
 import clock from "../assets/clock.png";
-import pod from "../assets/pod.png";
+// import pod from "../assets/pod.png";
 import girlPod from "../assets/Girl.png";
 import convo from "../assets/convo.png";
 
