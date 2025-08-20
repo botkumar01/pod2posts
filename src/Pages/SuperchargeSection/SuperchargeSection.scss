@@ -285,9 +285,12 @@ mask-size: cover;
 
     .supercharge-content {
       // margin-bottom: 1rem;
-
+      .but{
+        margin-left: 0%;
+        margin-bottom: 1rem;
+      }
       h2 {
-        font-size: 18px; /* smaller for better fit */
+        font-size: 22px; /* smaller for better fit */
       }
     }
 
