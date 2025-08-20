@@ -4,7 +4,7 @@
 
     position: fixed;    /* ✅ stays fixed in viewport */
     top: .5rem;   
-    padding: 1rem;  
+    padding: 1.5rem;  
     padding-left: 0rem;     /* adjust vertical position */
     // left: 3rem;         /* adjust horizontal position */
     z-index: 100;       /* make sure it stays above other elements */
@@ -31,7 +31,7 @@ nav.siteNav {
     display: flex;
     align-items: center;
 
-    padding:1rem 0rem;
+    padding:1.5rem 0rem;
     // nav.siteNav ul {
     // margin: 30px auto ;   /* ✅ centers the <ul> inside nav */
     // padding-left: 4rem;

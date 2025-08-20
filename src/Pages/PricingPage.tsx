@@ -43,7 +43,7 @@ const PricingPage: React.FC = () => {
         <div className="info">
           <InfoPoint 
             text={
-              <span><b>50% OFF for LIFE</b> for the first 50 podcasters who sign up</span>
+              <span><b>50% OFF for Month</b> for the first 50 podcasters who sign up</span>
             }
           />
           <InfoPoint 
