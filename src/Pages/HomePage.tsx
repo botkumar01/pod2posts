@@ -100,17 +100,17 @@ const HomePage: React.FC = () => {
   whileInView="visible"
   viewport={{ once: true }}
 >
-  <motion.a
-    href="https://youtu.be/043szMp3D9s"
-    target="_blank"
-    rel="noopener noreferrer"
-    variants={fadeUpVariant}
-    className="videoWrapper"
-  >
-    <img src={pod} alt="Video Preview" />
-    <div className="playButton">▶</div>
-  </motion.a>
+  <motion.div variants={fadeUpVariant} className="videoWrapper">
+    <iframe
+  src="https://www.youtube.com/embed/043szMp3D9s?controls=1&rel=0&modestbranding=1"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+></iframe>
+  </motion.div>
 </motion.section>
+
 
 {/* </motion.section> */}
 
@@ -262,9 +262,9 @@ const HomePage: React.FC = () => {
           <FAQPage />
         </motion.div>
         <PricingPage />
+        {/* <br />
         <br />
-        <br />
-        <br />
+        <br /> */}
           
      
         
