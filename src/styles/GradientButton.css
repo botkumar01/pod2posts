@@ -48,27 +48,7 @@ button.primary:hover::before {
   opacity: 1; /* fade in reversed gradient */
 }
 
-button.secondary {
-  border: none;
-  color: white;
-  font-size: 1rem !important;
-  font-weight: 500;
-  cursor: pointer;
-  background: linear-gradient(90deg, #DD7F41, #6B26D8);
-  background-size: 200% 100%;   /* wider gradient */
-  background-position: 0% 50%;  /* start left */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-position 0.4s ease; /* smooth move */
-  outline: none; /* remove click outline */
-}
 
-button.secondary:hover {
-  background-position: 100% 50%; /* animate gradient slide */
-}
-
-button.secondary:focus {
-  outline: none; /* prevent outline on click */
-}
 .btn {
   border-radius: 50px;
   max-width: max-content;
@@ -91,26 +71,9 @@ button.white {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
 }
 
-button.white {
-  
-  outline: none;
-  overflow: hidden; /* keep overlay inside */
-  z-index: 1; /* text layer above ::before */
-}
 
-button.white::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #d4cece,#ffffff);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: -1; /* 👈 keeps overlay behind text */
-}
 
-button.white:hover::before {
-  opacity: 1; /* fade in reversed gradient */
-}
+
 
 button.purple {
   border: none;
