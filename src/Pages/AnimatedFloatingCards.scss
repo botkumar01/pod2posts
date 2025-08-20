@@ -38,8 +38,39 @@
 }
 
 /* <= 350px - small mobile */
-@media screen and (max-width: 350px) {
-  .Fe {
-    // max-width: 150px;
+
+/* Base style */
+// .overlay {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   // transform: translate(-50%, -50%);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   pointer-events: none; /* optional: make overlay not block clicks */
+// }
+
+.overlay img {
+  min-width: 180px !important;   /* controls scaling inside parent */
+  // height: 100% !important;  /* ensures no cropping */
+  height: auto !important;
+  // object-fit: contain;
+}
+
+@media (min-width: 1367px) and (max-width: 1600px) {
+  .overlay img {
+    min-width: 170px !important; 
+  }
+}
+@media (min-width: 1250px) and (max-width: 1367px) {
+  .overlay img {
+    min-width: 160px !important; 
+  }
+}
+@media (min-width: 1100px) and (max-width: 1250px) {
+  .overlay img {
+    min-width: 140px !important; 
   }
 }

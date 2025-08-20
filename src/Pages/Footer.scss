@@ -240,6 +240,9 @@
 
 
       a {
+        border: .5px solid #d1d5db;
+        border-radius: 8px;
+        padding: 5.5px;
         color: #d1d5db;
         display: inline-flex;
         transition: color 0.2s ease;
@@ -335,8 +338,10 @@
 
       &-social {
         display: flex;
-        justify-content: center;
-        gap: 10.5rem;
+        justify-content: space-between;
+        // align-items: center;
+        gap: 9.5rem;
+        padding: 0%;
       }
 
       &-right {
@@ -381,11 +386,11 @@
 
     .footer__bottom {
       &-legal {
-        gap: 2rem;
+        gap: 1.4rem;
       }
 
       &-social {
-        gap: 100%;
+        gap: 5rem;
       }
     }
   }
@@ -427,20 +432,24 @@
 
     .footer__bottom {
       &-legal{
-        gap: 1rem;
+        gap: .8rem;
+        a{
+          font-size: 0.65rem;
+        }
         // justify-content: center;
         // text-align: center;
       }
       &-social {
         // flex-direction: column;
         gap: 3rem;
+        scale: .8;
       }
     }
   }
 }
 
 // For small phones
-@media (max-width: 350px) {
+@media (max-width: 360px) {
   .footer {
     .footer__brand {
       // padding: 0 0.5rem;
@@ -475,7 +484,7 @@
 
       &-legal,
       &-social {
-        gap: 2rem;
+        // gap: 2rem;
       }
     }
   }

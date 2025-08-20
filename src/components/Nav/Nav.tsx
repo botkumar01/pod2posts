@@ -21,7 +21,7 @@ const Nav: React.FC<{ items: NavItem[] }> = ({ items }) => {
     <>
     <div className="platformIcon">
           <img src={siteIcon} alt="Platform Icon" />
-          <span>PotoPosts</span>
+          <span>PodoPosts</span>
         </div>
       <nav className="siteNav">
         

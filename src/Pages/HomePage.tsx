@@ -15,7 +15,7 @@ import MultiText from "../components/MultiText";
 import audioIcon from "../assets/audio.png";
 import Target from "../assets/circles.png";
 import clock from "../assets/clock.png";
-
+import pod from "../assets/pod.png";
 import girlPod from "../assets/Girl.png";
 import convo from "../assets/convo.png";
 
@@ -92,29 +92,28 @@ const HomePage: React.FC = () => {
   </motion.div>
 </motion.section>
 
-<motion.section 
+
+<motion.section
   className="placeholderImage"
   variants={containerVariants}
   initial="hidden"
   whileInView="visible"
   viewport={{ once: true }}
 >
-  <motion.div variants={fadeUpVariant}> {/* content inside */}</motion.div>
+  <motion.a
+    href="https://youtu.be/043szMp3D9s"
+    target="_blank"
+    rel="noopener noreferrer"
+    variants={fadeUpVariant}
+    className="videoWrapper"
+  >
+    <img src={pod} alt="Video Preview" />
+    <div className="playButton">▶</div>
+  </motion.a>
 </motion.section>
 
-
-  {/* <motion.div variants={fadeUpVariant}> about content</motion.div> */}
 {/* </motion.section> */}
 
-{/* <motion.section 
-  className="about"
-  variants={fadeUpVariant}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
-> */}
-  {/* About content */}
-{/* </motion.section> */}
 <section className="about">
           <motion.div 
             className="aboutImage left"
